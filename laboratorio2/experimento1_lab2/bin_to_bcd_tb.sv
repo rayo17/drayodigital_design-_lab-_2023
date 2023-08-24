@@ -1,9 +1,9 @@
 module bin_to_bcd_tb();
     
-	 logic a, b, c, d, b0, b1, b2, b3, b4;
+	 logic a, b, c, d, salida[4:0];
     
     
-    bin_to_bcd modulo(a, b, c, d, b0, b1, b2, b3, b4); 
+    bin_to_bcd modulo(a, b, c, d, salida[4:0]); 
 
     initial begin
         a = 0;

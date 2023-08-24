@@ -1,5 +1,5 @@
 Flow report for experimento1_lab2
-Thu Aug 24 14:49:24 2023
+Thu Aug 24 16:05:09 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Thu Aug 24 14:49:24 2023          ;
-; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name               ; experimento1_lab2                              ;
-; Top-level Entity Name       ; bin_to_bcd                                     ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Thu Aug 24 16:05:09 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; experimento1_lab2                              ;
+; Top-level Entity Name           ; decoBinToBcd                                   ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 5 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 18 / 457 ( 4 % )                               ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,66 +68,78 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/24/2023 14:49:20 ;
+; Start date & time ; 08/24/2023 16:04:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; experimento1_lab2   ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                    ;
-+--------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; Assignment Name                      ; Value                                  ; Default Value     ; Entity Name ; Section Id                        ;
-+--------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 9423240382781.169291016012960          ; --                ; --          ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                ; --          ; bin_to_bcd_tb                     ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; bin_to_bcd_tb                          ; --                ; --          ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --                ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>            ; --          ; --                                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; bin_to_bcd_tb.sv                       ; --                ; --          ; bin_to_bcd_tb                     ;
-; EDA_TEST_BENCH_MODULE_NAME           ; bin_to_bcd_tb                          ; --                ; --          ; bin_to_bcd_tb                     ;
-; EDA_TEST_BENCH_NAME                  ; bin_to_bcd_tb                          ; --                ; --          ; eda_simulation                    ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --                ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                ; bin_to_bcd  ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                ; bin_to_bcd  ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                ; bin_to_bcd  ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --                ; --          ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                ; --          ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; bin_to_bcd                             ; experimento1_lab2 ; --          ; --                                ;
-+--------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                     ;
++--------------------------------------+----------------------------------------+-------------------+--------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value     ; Entity Name  ; Section Id                        ;
++--------------------------------------+----------------------------------------+-------------------+--------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 9423240382781.169291467300312          ; --                ; --           ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                ; --           ; bin_to_bcd_tb                     ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --           ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --           ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --           ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --           ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; bin_to_bcd_tb                          ; --                ; --           ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --                ; --           ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>            ; --           ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                ; --           ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; bin_to_bcd_tb.sv                       ; --                ; --           ; bin_to_bcd_tb                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; bin_to_bcd_tb                          ; --                ; --           ; bin_to_bcd_tb                     ;
+; EDA_TEST_BENCH_NAME                  ; bin_to_bcd_tb                          ; --                ; --           ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --                ; --           ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                ; --           ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                ; --           ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                ; decoBinToBcd ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                ; decoBinToBcd ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                ; decoBinToBcd ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --                ; --           ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                ; --           ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                ; --           ; --                                ;
+; TOP_LEVEL_ENTITY                     ; decoBinToBcd                           ; experimento1_lab2 ; --           ; --                                ;
++--------------------------------------+----------------------------------------+-------------------+--------------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:05     ; 1.0                     ; 4779 MB             ; 00:00:03                           ;
-; Total                  ; 00:00:05     ; --                      ; --                  ; 00:00:03                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4855 MB             ; 00:00:03                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 7270 MB             ; 00:00:25                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4873 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 5203 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4730 MB             ; 00:00:00                           ;
+; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:31                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off experimento1_lab2 -c experimento1_lab2 --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off experimento1_lab2 -c experimento1_lab2
+quartus_fit --read_settings_files=off --write_settings_files=off experimento1_lab2 -c experimento1_lab2
+quartus_asm --read_settings_files=off --write_settings_files=off experimento1_lab2 -c experimento1_lab2
+quartus_sta experimento1_lab2 -c experimento1_lab2
+quartus_eda --read_settings_files=off --write_settings_files=off experimento1_lab2 -c experimento1_lab2
 
 
 

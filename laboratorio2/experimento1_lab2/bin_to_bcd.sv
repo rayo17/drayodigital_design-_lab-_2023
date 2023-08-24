@@ -1,9 +1,9 @@
-module bin_to_bcd(input logic A, B, C, D, output logic B0 ,B1, B2, B3, B4);
+module bin_to_bcd(input logic A, B, C, D, output salida[4:0]);
 
-	assign B0 = D;
-	assign B1 = (~A & C) | (~C & A & B);
-	assign B2 = (~A & B) | (B & C);
-	assign B3 = A & ~B & ~C;
-	assign B4 = (A & B) | (A & C);
+	assign salida[0] = D;
+	assign salida[1] = (~A & C) | (~C & A & B);
+	assign salida[2] = (~A & B) | (B & C);
+	assign salida[3] = A & ~B & ~C;
+	assign salida[4] = (A & B) | (A & C);
 
 endmodule

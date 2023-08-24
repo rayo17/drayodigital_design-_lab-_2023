@@ -1,25 +1,106 @@
-|bin_to_bcd
-A => B1.IN0
-A => B3.IN0
-A => B4.IN0
-A => B4.IN0
-A => B1.IN0
-A => B2.IN0
-B => B1.IN1
-B => B2.IN1
-B => B2.IN0
-B => B4.IN1
-B => B3.IN1
-C => B1.IN1
-C => B2.IN1
-C => B4.IN1
-C => B1.IN1
-C => B3.IN1
-D => B0.DATAIN
-B0 <= D.DB_MAX_OUTPUT_PORT_TYPE
-B1 <= B1.DB_MAX_OUTPUT_PORT_TYPE
-B2 <= B2.DB_MAX_OUTPUT_PORT_TYPE
-B3 <= B3.DB_MAX_OUTPUT_PORT_TYPE
-B4 <= B4.DB_MAX_OUTPUT_PORT_TYPE
+|decoBinToBcd
+i0 => bin_to_bcd:decoBcd.A
+i1 => bin_to_bcd:decoBcd.B
+i2 => bin_to_bcd:decoBcd.C
+i3 => bin_to_bcd:decoBcd.D
+salidaDis1[0] << bin_to_display:decoDisplayUni.salida[0]
+salidaDis1[1] << bin_to_display:decoDisplayUni.salida[1]
+salidaDis1[2] << bin_to_display:decoDisplayUni.salida[2]
+salidaDis1[3] << bin_to_display:decoDisplayUni.salida[3]
+salidaDis1[4] << bin_to_display:decoDisplayUni.salida[4]
+salidaDis1[5] << bin_to_display:decoDisplayUni.salida[5]
+salidaDis1[6] << bin_to_display:decoDisplayUni.salida[6]
+salidaDis2[0] << bit_to_display:unoCeroDisplay.salida[0]
+salidaDis2[1] << bit_to_display:unoCeroDisplay.salida[1]
+salidaDis2[2] << bit_to_display:unoCeroDisplay.salida[2]
+salidaDis2[3] << bit_to_display:unoCeroDisplay.salida[3]
+salidaDis2[4] << bit_to_display:unoCeroDisplay.salida[4]
+salidaDis2[5] << bit_to_display:unoCeroDisplay.salida[5]
+salidaDis2[6] << bit_to_display:unoCeroDisplay.salida[6]
+
+
+|decoBinToBcd|bin_to_bcd:decoBcd
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+B => salida.IN1
+B => salida.IN1
+B => salida.IN0
+B => salida.IN1
+B => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+D => salida[0].DATAIN
+salida[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoBinToBcd|bin_to_display:decoDisplayUni
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+A => salida.IN0
+B => salida.IN1
+B => salida.IN1
+B => salida.IN1
+B => salida.IN1
+B => salida.IN0
+B => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+C => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+D => salida.IN1
+salida[0] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[5] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[6] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|decoBinToBcd|bit_to_display:unoCeroDisplay
+A => salida[0].DATAIN
+A => salida[5].DATAIN
+A => salida[4].DATAIN
+A => salida[3].DATAIN
+salida[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= <GND>
+salida[2] <= <GND>
+salida[3] <= A.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= A.DB_MAX_OUTPUT_PORT_TYPE
+salida[5] <= A.DB_MAX_OUTPUT_PORT_TYPE
+salida[6] <= <VCC>
 
 
