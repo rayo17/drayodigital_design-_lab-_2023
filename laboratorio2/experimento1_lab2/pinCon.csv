@@ -1,8 +1,8 @@
 To,Location
-i0,PIN_AB12
-i1,PIN_AC12
-i2,PIN_AF9
-i3,PIN_AF10
+i0,PIN_AE11
+i1,PIN_AC9
+i2,PIN_AD10
+i3,PIN_AE12
 salidaDis1[6],PIN_AH28
 salidaDis1[5],PIN_AG28
 salidaDis1[4],PIN_AF28

@@ -1,5 +1,5 @@
 Fitter report for experimento1_lab2
-Thu Aug 24 16:04:59 2023
+Thu Aug 24 16:33:21 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Thu Aug 24 16:04:59 2023          ;
+; Fitter Status                   ; Successful - Thu Aug 24 16:33:21 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; experimento1_lab2                              ;
 ; Top-level Entity Name           ; decoBinToBcd                                   ;
@@ -153,7 +153,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-12        ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -393,10 +393,10 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; i0   ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; i1   ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; i2   ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; i3   ; AF10  ; 3A       ; 4            ; 0            ; 51           ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; i0   ; AE11  ; 3A       ; 4            ; 0            ; 34           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; i1   ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; i2   ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; i3   ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -518,7 +518,7 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 ; AB9      ; 42         ; 3A             ; #TDO                            ; output ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AB11     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB12     ; 72         ; 3A             ; i0                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AB12     ; 72         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB13     ; 88         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB14     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB15     ; 106        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -545,10 +545,10 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 ; AC6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC7      ; 45         ; 3A             ; ^AS_DATA3, DATA3                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AC8      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC9      ; 58         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AC9      ; 58         ; 3A             ; i1                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AC10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC11     ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC12     ; 82         ; 3A             ; i1                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AC12     ; 82         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC14     ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC15     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -576,7 +576,7 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 ; AD7      ; 62         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD8      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD9      ; 55         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD10     ; 56         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD10     ; 56         ; 3A             ; i2                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AD11     ; 54         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD12     ; 80         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD13     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -607,8 +607,8 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 ; AE8      ; 47         ; 3A             ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AE11     ; 59         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE11     ; 59         ; 3A             ; i0                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AE12     ; 52         ; 3A             ; i3                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AE13     ; 95         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE14     ; 96         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -635,8 +635,8 @@ The pin-out file can be found in C:/Users/User/Desktop/taller/drayodigital_desig
 ; AF6      ; 75         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF7      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AF8      ; 70         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF9      ; 67         ; 3A             ; i2                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AF10     ; 57         ; 3A             ; i3                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AF9      ; 67         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF10     ; 57         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF11     ; 87         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF12     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF13     ; 93         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1406,10 +1406,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; salidaDis2[4] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; salidaDis2[5] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; salidaDis2[6] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; i0            ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; i0            ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; i2            ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; i1            ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; i3            ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; i3            ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1419,14 +1419,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
 +--------------------------------------------------+-------------------+---------+
 ; i0                                               ;                   ;         ;
-;      - bin_to_display:decoDisplayUni|salida~0    ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida~1    ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[2]~2 ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[3]   ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[4]   ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[5]~3 ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[6]~4 ; 1                 ; 0       ;
-;      - bin_to_bcd:decoBcd|salida[4]~0            ; 1                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida~0    ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida~1    ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[2]~2 ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[3]   ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[4]   ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[5]~3 ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[6]~4 ; 0                 ; 0       ;
+;      - bin_to_bcd:decoBcd|salida[4]~0            ; 0                 ; 0       ;
 ; i2                                               ;                   ;         ;
 ;      - bin_to_display:decoDisplayUni|salida~0    ; 1                 ; 0       ;
 ;      - bin_to_display:decoDisplayUni|salida~1    ; 1                 ; 0       ;
@@ -1446,13 +1446,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - bin_to_display:decoDisplayUni|salida[6]~4 ; 0                 ; 0       ;
 ;      - bin_to_bcd:decoBcd|salida[4]~0            ; 0                 ; 0       ;
 ; i3                                               ;                   ;         ;
-;      - bin_to_display:decoDisplayUni|salida~0    ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida~1    ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[2]~2 ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[3]   ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[4]   ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[5]~3 ; 1                 ; 0       ;
-;      - bin_to_display:decoDisplayUni|salida[6]~4 ; 1                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida~0    ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida~1    ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[2]~2 ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[3]   ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[4]   ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[5]~3 ; 0                 ; 0       ;
+;      - bin_to_display:decoDisplayUni|salida[6]~4 ; 0                 ; 0       ;
 +--------------------------------------------------+-------------------+---------+
 
 
@@ -1462,9 +1462,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
 ; Block interconnects                         ; 15 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 5 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 5 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 9 / 56,300 ( < 1 % )   ;
+; C12 interconnects                           ; 4 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 4 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 10 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
@@ -1526,10 +1526,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
 ; Local interconnects                         ; 0 / 84,580 ( 0 % )     ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 22 / 12,676 ( < 1 % )  ;
+; R14 interconnects                           ; 23 / 12,676 ( < 1 % )  ;
 ; R14/C12 interconnect drivers                ; 23 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 5 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 3 / 266,960 ( < 1 % )  ;
+; R3 interconnects                            ; 8 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 8 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )        ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1700,13 +1700,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/output_files/experimento1_lab2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 7270 megabytes
-    Info: Processing ended: Thu Aug 24 16:04:59 2023
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 7278 megabytes
+    Info: Processing ended: Thu Aug 24 16:33:21 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +----------------------------+

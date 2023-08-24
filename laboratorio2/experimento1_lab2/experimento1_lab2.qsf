@@ -70,10 +70,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE bit_to_display.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AB12 -to i0
-set_location_assignment PIN_AC12 -to i1
-set_location_assignment PIN_AF9 -to i2
-set_location_assignment PIN_AF10 -to i3
+set_location_assignment PIN_AE11 -to i0
+set_location_assignment PIN_AC9 -to i1
+set_location_assignment PIN_AD10 -to i2
+set_location_assignment PIN_AE12 -to i3
 set_location_assignment PIN_AH28 -to salidaDis1[6]
 set_location_assignment PIN_AG28 -to salidaDis1[5]
 set_location_assignment PIN_AF28 -to salidaDis1[4]
