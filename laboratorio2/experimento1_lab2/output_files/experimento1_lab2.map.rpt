@@ -1,6 +1,6 @@
 Analysis & Elaboration report for experimento1_lab2
-Wed Aug 23 14:02:36 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Thu Aug 24 14:49:24 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -11,13 +11,14 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,8 +38,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Aug 23 14:02:36 2023          ;
-; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Thu Aug 24 14:49:24 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; experimento1_lab2                              ;
 ; Top-level Entity Name         ; bin_to_bcd                                     ;
 ; Family                        ; Cyclone V                                      ;
@@ -57,8 +58,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -160,20 +161,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Aug 23 14:02:14 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Thu Aug 24 14:49:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento1_lab2 -c experimento1_lab2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file decobintobcd.sv
+    Info (12023): Found entity 1: decoBinToBcd File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/decoBinToBcd.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bin_to_bcd.sv
-    Info (12023): Found entity 1: bin_to_bcd File: E:/tallerDiseno/experimento1_lab2/bin_to_bcd.sv Line: 1
+    Info (12023): Found entity 1: bin_to_bcd File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/bin_to_bcd.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bin_to_bcd_tb.sv
-    Info (12023): Found entity 1: bin_to_bcd_tb File: E:/tallerDiseno/experimento1_lab2/bin_to_bcd_tb.sv Line: 1
+    Info (12023): Found entity 1: bin_to_bcd_tb File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/bin_to_bcd_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bin_to_display.sv
+    Info (12023): Found entity 1: bin_to_display File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/bin_to_display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bit_to_display.sv
+    Info (12023): Found entity 1: bit_to_display File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/bit_to_display.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at decoBinToBcd.sv(9): instance has no name File: C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/decoBinToBcd.sv Line: 9
 Info (12127): Elaborating entity "bin_to_bcd" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Wed Aug 23 14:02:36 2023
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:48
+Info (144001): Generated suppressed messages file C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/output_files/experimento1_lab2.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Thu Aug 24 14:49:24 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Desktop/taller/drayodigital_design-_lab-_2023/laboratorio2/experimento1_lab2/output_files/experimento1_lab2.map.smsg.
 
 

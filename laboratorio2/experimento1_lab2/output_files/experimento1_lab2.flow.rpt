@@ -1,6 +1,6 @@
 Flow report for experimento1_lab2
-Wed Aug 23 14:02:36 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Thu Aug 24 14:49:24 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Wed Aug 23 14:02:36 2023          ;
-; Quartus Prime Version       ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Flow Status                 ; Successful - Thu Aug 24 14:49:24 2023          ;
+; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name               ; experimento1_lab2                              ;
 ; Top-level Entity Name       ; bin_to_bcd                                     ;
 ; Family                      ; Cyclone V                                      ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/23/2023 14:02:15 ;
+; Start date & time ; 08/24/2023 14:49:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; experimento1_lab2   ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value     ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+-------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 929348996527.169282093516320           ; --                ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 9423240382781.169291016012960          ; --                ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                ; --          ; bin_to_bcd_tb                     ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                ; --          ; eda_board_design_boundary_scan    ;
@@ -105,8 +105,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:22     ; 1.0                     ; 4773 MB             ; 00:00:48                           ;
-; Total                  ; 00:00:22     ; --                      ; --                  ; 00:00:48                           ;
+; Analysis & Elaboration ; 00:00:05     ; 1.0                     ; 4779 MB             ; 00:00:03                           ;
+; Total                  ; 00:00:05     ; --                      ; --                  ; 00:00:03                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,7 +115,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-7NBVCSN  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
