@@ -1,0 +1,32 @@
+module bin_to_bcd_tb();
+
+	reg A, B, C, D;
+	wire B0, B1, B2, B3, B4;
+	
+	// Instancia del decodificador
+	
+	bin_to_bcd modulo(
+		.A(A), .B(B), .C(C), .D(D),
+		.B0(B0), .B1(B1), .B2(B2), .B3(B3), .B4(B4)
+	);
+	
+	initial begin
+	
+	$display("A B C D | BCD");
+	$display("--------+--------");
+	
+	for (A = 0; A<=1; A++) begin
+		for (B = 0; B<=1; B++) begin
+			for (C = 0; C<=1; C++) begin
+				for (D = 0; D<=1; D++) begin
+					#10;
+					$display("%b %b %b %b | %b", A, B, C, D, BCD);
+				end
+			end
+		end
+	end
+	
+	$finish;
+end
+	
+endmodule
