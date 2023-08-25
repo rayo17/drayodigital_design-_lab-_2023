@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sVect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sVect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sVect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sVect[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sVect[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sum_hxd[9]",
+					"strict" : false
+				},
+				{
+					"name" : "aVect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bVect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mainC_in",
+					"strict" : false
+				},
+				{
+					"name" : "aVect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bVect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aVect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bVect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "aVect[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bVect[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

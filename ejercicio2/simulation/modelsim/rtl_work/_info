@@ -1,0 +1,175 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus_proyectos/sumador/simulation/modelsim
+Econversor
+Z1 w1677981241
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8D:/Quartus_proyectos/sumador/Conversor.vhd
+Z5 FD:/Quartus_proyectos/sumador/Conversor.vhd
+l0
+L4 1
+V;3>X2l6VS=MIe4<Ojz2zP0
+!s100 8U==Z0bzn;<SUDb;Te9Tg3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1677983230
+!i10b 1
+Z8 !s108 1677983230.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Quartus_proyectos/sumador/Conversor.vhd|
+Z10 !s107 D:/Quartus_proyectos/sumador/Conversor.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aconversor_arch
+R2
+R3
+DEx4 work 9 conversor 0 22 ;3>X2l6VS=MIe4<Ojz2zP0
+!i122 2
+l12
+L10 28
+V[X@<mWO:FCd^65ZHiMRYX0
+!s100 S9<UzDYLTX3lk;fhjVB<T1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esumador1bit
+Z13 w1677732497
+R2
+R3
+!i122 1
+R0
+Z14 8D:/Quartus_proyectos/sumador/Sumador1Bit.vhd
+Z15 FD:/Quartus_proyectos/sumador/Sumador1Bit.vhd
+l0
+L5 1
+V6n4?9ieIl5D];mziihNeN1
+!s100 `1V[GdBFUPJMjR8dUD6>20
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|D:/Quartus_proyectos/sumador/Sumador1Bit.vhd|
+Z17 !s107 D:/Quartus_proyectos/sumador/Sumador1Bit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 sumador1bit 0 22 6n4?9ieIl5D];mziihNeN1
+!i122 1
+l13
+L12 11
+V8BCNXzUNOgkQ5_2UnPYg82
+!s100 iQUg6mDl3S80GTGgK6oCG1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Esumador4bits
+Z18 w1677982020
+R2
+R3
+!i122 0
+R0
+Z19 8D:/Quartus_proyectos/sumador/Sumador4Bits.vhd
+Z20 FD:/Quartus_proyectos/sumador/Sumador4Bits.vhd
+l0
+L4 1
+V4?TmRZmhL4R8i=bf>_eO;0
+!s100 [@dCbaRUo3HdKbWd?2;f40
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Quartus_proyectos/sumador/Sumador4Bits.vhd|
+Z22 !s107 D:/Quartus_proyectos/sumador/Sumador4Bits.vhd|
+!i113 1
+R11
+R12
+Aarch_sumador4bits
+R2
+R3
+DEx4 work 12 sumador4bits 0 22 4?TmRZmhL4R8i=bf>_eO;0
+!i122 0
+l33
+L15 62
+Vf`=Gz7b_>Xi=Tjk^D7J<32
+!s100 iSX329CANof^aDbKSjaNY2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Esumador4bits_tb
+Z23 w1677775199
+R2
+R3
+!i122 3
+R0
+Z24 8D:/Quartus_proyectos/sumador/Sumador4Bits_tb.vhd
+Z25 FD:/Quartus_proyectos/sumador/Sumador4Bits_tb.vhd
+l0
+L4 1
+VaO?oS73VPaHS;RWOj?HFI0
+!s100 DS37l^f4Fge`ZgYDWFIm50
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/Quartus_proyectos/sumador/Sumador4Bits_tb.vhd|
+!s107 D:/Quartus_proyectos/sumador/Sumador4Bits_tb.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 15 sumador4bits_tb 0 22 aO?oS73VPaHS;RWOj?HFI0
+!i122 3
+l22
+L7 48
+VM17`D^Fi8l]Y`6RA^GHJH3
+!s100 TVl6h:2gO5[DE:iTgQg8F1
+R6
+31
+!s110 1677983231
+!i10b 1
+R8
+R26
+Z27 !s107 D:/Quartus_proyectos/sumador/Sumador4Bits_tb.vhd|
+!i113 1
+R11
+R12
