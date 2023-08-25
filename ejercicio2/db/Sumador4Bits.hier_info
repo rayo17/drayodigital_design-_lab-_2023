@@ -1,0 +1,129 @@
+|Sumador4Bits
+sVect[0] << Sumador1Bit:bit_s0.sum
+sVect[1] << Sumador1Bit:bit_s1.sum
+sVect[2] << Sumador1Bit:bit_s2.sum
+sVect[3] << Sumador1Bit:bit_s3.sum
+sVect[4] << Sumador1Bit:bit_s3.carryOut
+sum_hxd[0] << Conversor:conv.hxd[0]
+sum_hxd[1] << Conversor:conv.hxd[1]
+sum_hxd[2] << Conversor:conv.hxd[2]
+sum_hxd[3] << Conversor:conv.hxd[3]
+sum_hxd[4] << Conversor:conv.hxd[4]
+sum_hxd[5] << Conversor:conv.hxd[5]
+sum_hxd[6] << Conversor:conv.hxd[6]
+sum_hxd[7] << Conversor:conv.hxd[7]
+sum_hxd[8] << Conversor:conv.hxd[8]
+sum_hxd[9] << Conversor:conv.hxd[9]
+aVect[0] => Sumador1Bit:bit_s0.a
+aVect[1] => Sumador1Bit:bit_s1.a
+aVect[2] => Sumador1Bit:bit_s2.a
+aVect[3] => Sumador1Bit:bit_s3.a
+bVect[0] => Sumador1Bit:bit_s0.b
+bVect[1] => Sumador1Bit:bit_s1.b
+bVect[2] => Sumador1Bit:bit_s2.b
+bVect[3] => Sumador1Bit:bit_s3.b
+mainC_in => Sumador1Bit:bit_s0.carryIn
+
+
+|Sumador4Bits|Sumador1Bit:bit_s0
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|Sumador4Bits|Sumador1Bit:bit_s1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|Sumador4Bits|Sumador1Bit:bit_s2
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|Sumador4Bits|Sumador1Bit:bit_s3
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|Sumador4Bits|Conversor:conv
+sum[0] => Ram0.RADDR
+sum[1] => Ram0.RADDR1
+sum[2] => Ram0.RADDR2
+sum[3] => Ram0.RADDR3
+sum[4] => Ram0.RADDR4
+hxd[0] <= Ram0.DATAOUT
+hxd[1] <= Ram0.DATAOUT1
+hxd[2] <= Ram0.DATAOUT2
+hxd[3] <= Ram0.DATAOUT3
+hxd[4] <= Ram0.DATAOUT4
+hxd[5] <= Ram0.DATAOUT5
+hxd[6] <= Ram0.DATAOUT6
+hxd[7] <= Ram0.DATAOUT7
+hxd[8] <= Ram0.DATAOUT8
+hxd[9] <= Ram0.DATAOUT9
+
+
