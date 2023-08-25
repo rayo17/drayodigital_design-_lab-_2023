@@ -1,0 +1,19 @@
+module Contador #(parameter N = 4) (
+    input logic reloj,      
+    input logic reset,    
+    output logic [N-1:0] count 
+);
+
+always @(posedge reloj or negedge reset) begin
+    if (!reset) begin
+        count <= {N{1'b1}};
+    end else begin
+        if (count == 0) begin
+            count <= {N{1'b1}}; 
+        end else begin
+            count <= count - 1; 
+        end
+    end
+end
+
+endmodule 

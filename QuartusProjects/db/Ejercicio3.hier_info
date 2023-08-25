@@ -1,0 +1,40 @@
+|Interfaz
+clk => clk.IN1
+reset => reset.IN1
+hex1[0] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex1[1] << <GND>
+hex1[2] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex1[3] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex1[4] << Contador:test6.port2
+hex1[5] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex1[6] << Contador:test6.port2
+hex0[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex0[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex0[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex0[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|Contador:test6
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+clk => count[4]~reg0.CLK
+clk => count[5]~reg0.CLK
+reset => count[0]~reg0.PRESET
+reset => count[1]~reg0.PRESET
+reset => count[2]~reg0.PRESET
+reset => count[3]~reg0.PRESET
+reset => count[4]~reg0.PRESET
+reset => count[5]~reg0.PRESET
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

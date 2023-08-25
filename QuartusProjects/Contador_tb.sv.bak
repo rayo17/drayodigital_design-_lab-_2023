@@ -1,0 +1,28 @@
+`timescale 10ns/1ns
+module Contador_tb();
+logic reloj, reset;
+logic [1:0] count2;
+logic [3:0] count4;
+logic [5:0] count6;
+
+ContadorRegresivo #(2) test2 (reloj,reset,count2);
+ContadorRegresivo #(4) test4 (reloj,reset,count4);
+ContadorRegresivo #(6) test6 (reloj,reset,count6);
+
+initial begin
+reloj = 1;
+reset=1;
+#5;
+reset=0;
+#5;
+reset=1;
+#5;
+forever begin
+	reloj=!reloj;
+	#5;
+	end
+end
+
+
+
+endmodule 
