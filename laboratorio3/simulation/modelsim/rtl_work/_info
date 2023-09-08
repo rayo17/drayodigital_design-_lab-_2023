@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim
+vmultiplicacion
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1694206678
+!i10b 1
+!s100 hSTHjlB@Tm<hD?[fS`an20
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]EWdHzSbLffTP;XUYXER61
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1694206648
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
+!i122 0
+L0 1 11
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1694206678.000000
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3
+Z9 tCvgOpt 0
+vmultiplicacion_tb
+R1
+R2
+!i10b 1
+!s100 J2G]WjlD55GeA=VHGEC_>0
+R3
+I4O5VY51clEfID0o`GVc7F0
+R4
+S1
+R0
+w1694205553
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv
+!i122 1
+L0 1 30
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv|
+!i113 1
+R7
+R8
+R9

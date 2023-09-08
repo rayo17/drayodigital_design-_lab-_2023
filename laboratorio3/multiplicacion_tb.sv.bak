@@ -1,0 +1,30 @@
+module multiplicacion_tb;
+
+    parameter N = 8;
+
+    logic [N-1:0] A, B;
+    logic [2*N-1:0] mul_out, expected_mul_out;
+    logic overflow;
+
+    multiplicacion #(N) dut(
+        .A(A),
+        .B(B),
+        .mul_out(mul_out),
+        .overflow(overflow)
+    );
+
+    initial begin
+        A = 2;
+        B = 3;
+        expected_mul_out = 6;
+    end
+
+    always @(posedge clk) begin
+        if (overflow) begin
+            $display("Error: Overflow detected");
+        end else if (mul_out != expected_mul_out) begin
+            $display("Error: Incorrect output");
+        end
+    end
+
+endmodule
