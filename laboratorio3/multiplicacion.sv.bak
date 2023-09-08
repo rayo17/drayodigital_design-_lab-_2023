@@ -8,5 +8,3 @@ assign mul_out = A * B;
 
 assign overflow =|mul_out[2*N-1:N/2]; // Evalua si los ultimos bits son diferente de 0
 
-endmodule
-
