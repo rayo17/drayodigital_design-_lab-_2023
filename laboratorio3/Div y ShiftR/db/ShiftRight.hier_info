@@ -1,0 +1,50 @@
+|ShiftRight_tb
+
+
+|ShiftRight_tb|ShiftRight:test
+Entrada[0] => ShiftBit:CrearShift[0].sll.In
+Entrada[1] => ShiftBit:CrearShift[1].sll.In
+Entrada[2] => ShiftBit:CrearShift[2].sll.In
+Entrada[3] => ShiftBit:CrearShift[3].sll.In
+Shift[0] => LessThan0.IN8
+Shift[0] => Mux0.IN6
+Shift[0] => Mux1.IN7
+Shift[0] => Mux2.IN8
+Shift[0] => Mux3.IN9
+Shift[1] => LessThan0.IN7
+Shift[1] => Mux0.IN5
+Shift[1] => Mux1.IN6
+Shift[1] => Mux2.IN7
+Shift[1] => Mux3.IN8
+Shift[2] => LessThan0.IN6
+Shift[2] => Mux0.IN4
+Shift[2] => Mux1.IN5
+Shift[2] => Mux2.IN6
+Shift[2] => Mux3.IN7
+Shift[3] => LessThan0.IN5
+Salida[0] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[3] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRight_tb|ShiftRight:test|ShiftBit:CrearShift[0].sll
+In => Out.DATAIN
+Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRight_tb|ShiftRight:test|ShiftBit:CrearShift[1].sll
+In => Out.DATAIN
+Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRight_tb|ShiftRight:test|ShiftBit:CrearShift[2].sll
+In => Out.DATAIN
+Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRight_tb|ShiftRight:test|ShiftBit:CrearShift[3].sll
+In => Out.DATAIN
+Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+
+
