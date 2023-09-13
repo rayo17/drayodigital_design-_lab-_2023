@@ -8,55 +8,374 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim
-vmultiplicacion
+Z0 dE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim
+vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694206678
+Z2 !s110 1694600586
 !i10b 1
-!s100 hSTHjlB@Tm<hD?[fS`an20
+!s100 iNfS]j?:5K8_JECUnP`Gl0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]EWdHzSbLffTP;XUYXER61
+IF;V`:Im<9d=ZO0WR;IDF;2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1694206648
-8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
-FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
-!i122 0
-L0 1 11
+w1694600177
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv
+!i122 9
+L0 1 55
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1694206678.000000
-!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
+Z6 !s108 1694600586.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3
+Z8 !s92 -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3
 Z9 tCvgOpt 0
-vmultiplicacion_tb
+n@a@l@u
+vALU_TB
 R1
-R2
+Z10 !s110 1694600588
 !i10b 1
-!s100 J2G]WjlD55GeA=VHGEC_>0
+!s100 g2?Ga]moRVd[m0AM724oD0
 R3
-I4O5VY51clEfID0o`GVc7F0
+ISiR;DWVc4gLF<eF^;AE2S0
 R4
 S1
 R0
-w1694205553
-8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv
-FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv
+w1694600491
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv
+!i122 14
+L0 1 94
+R5
+r1
+!s85 0
+31
+!s108 1694600588.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u_@t@b
+vand_compuerta
+R1
+Z11 !s110 1694600585
+!i10b 1
+!s100 DC;1nl]ZM;cNN9mecCZ591
+R3
+IznmzaORiYz=j;`djQFLTO0
+R4
+S1
+R0
+w1694580239
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv
+!i122 6
+L0 2 9
+R5
+r1
+!s85 0
+31
+Z12 !s108 1694600585.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv|
+!i113 1
+R7
+R8
+R9
+vDividir
+R1
+Z13 !s110 1694600587
+!i10b 1
+!s100 2hD0@75UH1C6XX=^na5hc3
+R3
+ITO66INK^A^eN2nLR=8C;i3
+R4
+S1
+R0
+w1694598650
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv
+!i122 11
+L0 1 34
+R5
+r1
+!s85 0
+31
+Z14 !s108 1694600587.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv|
+!i113 1
+R7
+R8
+R9
+n@dividir
+vmodulo
+R1
+R11
+!i10b 1
+!s100 l]H_So75^9VB7<@zYaI=e0
+R3
+Ih81ek@CgKadaOP=PTCcB`1
+R4
+S1
+R0
+w1694580444
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv
+!i122 5
+Z15 L0 1 8
+R5
+r1
+!s85 0
+31
+R12
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv|
+!i113 1
+R7
+R8
+R9
+vmultiplicacion
+R1
+Z16 !s110 1694600584
+!i10b 1
+!s100 XD595Fz>hL=4UP]DS@T?D2
+R3
+IV2LHNozVR`dk]7oaahD3:3
+R4
+S1
+R0
+w1694581524
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv
+!i122 4
+R15
+R5
+r1
+!s85 0
+31
+Z17 !s108 1694600584.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv|
+!i113 1
+R7
+R8
+R9
+vor_compuerta
+R1
+R2
+!i10b 1
+!s100 lQa8Io_kPEkKS8V0O]24f1
+R3
+IZSLMcR;C`oIZf0i47VVkP0
+R4
+S1
+R0
+w1694580269
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv
+!i122 7
+Z18 L0 1 9
+R5
+r1
+!s85 0
+31
+R12
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv|
+!i113 1
+R7
+R8
+R9
+vrestador_nbits
+R1
+R16
+!i10b 1
+!s100 j2:i=J:?3@Z86_Ulh7T4=3
+R3
+I^Z<H_G1aLChh1DB88h=362
+R4
+S1
+R0
+Z19 w1694580007
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv
+!i122 3
+L0 1 35
+R5
+r1
+!s85 0
+31
+R17
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv|
+!i113 1
+R7
+R8
+R9
+vrestadorCompleto
+R1
+R16
+!i10b 1
+!s100 D:ggND9@n2B7JemB]EDi31
+R3
+IINTJ]kJz4lS4<>ki@Ta4j3
+R4
+S1
+R0
+R19
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv
+!i122 2
+Z20 L0 1 25
+R5
+r1
+!s85 0
+31
+R17
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv|
+!i113 1
+R7
+R8
+R9
+nrestador@completo
+vShiftBit
+R1
+R13
+!i10b 1
+!s100 OLUEz^Q4f_E]4OhI1;Z_@0
+R3
+IhK`6Vz]aA_iQ20:d6oUDC3
+R4
+S1
+R0
+w1694598731
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv
+!i122 12
+R15
+R5
+r1
+!s85 0
+31
+R14
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv|
+!i113 1
+R7
+R8
+R9
+n@shift@bit
+vShiftRight
+R1
+R10
+!i10b 1
+!s100 ^W=[?YNW@ca7AVj]CMg4S2
+R3
+Iozo0Ybf<QBg1EKIZP0K`n1
+R4
+S1
+R0
+w1694598767
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv
+!i122 13
+R20
+R5
+r1
+!s85 0
+31
+R14
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv|
+!i113 1
+R7
+R8
+R9
+n@shift@right
+vsumador_nbits
+R1
+Z21 !s110 1694600583
+!i10b 1
+!s100 >Fjb;E6NTQmfK2^nLB4W50
+R3
+I[]e:z`=6D1I^JUOkgWQI61
+R4
+S1
+R0
+w1694599705
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv
+!i122 0
+L0 1 31
+R5
+r1
+!s85 0
+31
+Z22 !s108 1694600583.000000
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv|
+!i113 1
+R7
+R8
+R9
+vsumadorCompleto
+R1
+R21
+!i10b 1
+!s100 5ZQzfzD2^<b7Pko0_8EWj3
+R3
+I0iIAVjF=ZPD4lN3@`5ml33
+R4
+S1
+R0
+w1694599709
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv
 !i122 1
-L0 1 30
+L0 1 18
+R5
+r1
+!s85 0
+31
+R22
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv|
+!i113 1
+R7
+R8
+R9
+nsumador@completo
+vxor_compuerta
+R1
+R2
+!i10b 1
+!s100 Dm:1F_Ka?4<F?nV[6M^R=2
+R3
+I_Unki[Y6olgj=Fc`4QP9[0
+R4
+S1
+R0
+w1694580295
+8E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv
+FE:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv
+!i122 8
+R18
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv|
+!s107 E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3|E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv|
 !i113 1
 R7
 R8

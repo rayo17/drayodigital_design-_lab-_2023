@@ -3,6 +3,6 @@ module modulo #(parameter N) (
 	output [N-1:0] out_modulo
 );
 
-	assign out_modulo = A & B;
+	assign out_modulo = A % B;
 
 endmodule

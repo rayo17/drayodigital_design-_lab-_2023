@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri Sep 08 14:57:38 2023
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Elaboration Status : Successful - Wed Sep 13 04:16:41 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : aluLab3
-Top-level Entity Name : multiplicacion
+Top-level Entity Name : ALU_TB
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

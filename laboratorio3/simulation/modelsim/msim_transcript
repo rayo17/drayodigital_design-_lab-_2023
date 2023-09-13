@@ -9,12 +9,12 @@
 # vmap altera_ver ./verilog_libs/altera_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera_ver ./verilog_libs/altera_ver 
-# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying E:/modelS/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_primitives.v}
+# vlog -vlog01compat -work altera_ver {e:/fpgaintel/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:44 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_primitives.v 
+# Start time: 04:22:06 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_ver e:/fpgaintel/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
 # -- Compiling module cascade
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 14:57:45 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:22:08 on Sep 13,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -104,10 +104,10 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap lpm_ver ./verilog_libs/lpm_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/220model.v}
+# vlog -vlog01compat -work lpm_ver {e:/fpgaintel/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:45 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/220model.v 
+# Start time: 04:22:10 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver e:/fpgaintel/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
 # -- Compiling module LPM_DEVICE_FAMILIES
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 14:57:45 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 04:22:10 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -179,10 +179,10 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap sgate_ver ./verilog_libs/sgate_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/sgate.v}
+# vlog -vlog01compat -work sgate_ver {e:/fpgaintel/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:46 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/sgate.v 
+# Start time: 04:22:13 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver e:/fpgaintel/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
 # -- Compiling module mux21
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 14:57:46 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 04:22:13 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -232,10 +232,10 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_mf.v}
+# vlog -vlog01compat -work altera_mf_ver {e:/fpgaintel/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:46 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_mf.v 
+# Start time: 04:22:15 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver e:/fpgaintel/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
 # -- Compiling module ALTERA_MF_HINT_EVALUATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 14:57:47 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:22:18 on Sep 13,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -373,10 +373,10 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
 # Modifying modelsim.ini
-# vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# vlog -sv -work altera_lnsim_ver {e:/fpgaintel/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:47 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/altera_lnsim.sv 
+# Start time: 04:22:20 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver e:/fpgaintel/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
 # -- Compiling module generic_pll
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 14:57:48 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:22:22 on Sep 13,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -467,26 +467,36 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap cyclonev_ver ./verilog_libs/cyclonev_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
+# vlog -vlog01compat -work cyclonev_ver {e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:48 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
+# Start time: 04:22:23 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 14:57:50 on Sep 08,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
+# End time: 04:22:31 on Sep 13,2023, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 10
+# vlog -vlog01compat -work cyclonev_ver {e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:50 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
+# Start time: 04:22:31 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 14:57:52 on Sep 08,2023, Elapsed time: 0:00:02
+# End time: 04:22:37 on Sep 13,2023, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_atoms.v}
+# vlog -vlog01compat -work cyclonev_ver {e:/fpgaintel/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:52 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_atoms.v 
+# Start time: 04:22:37 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_ver e:/fpgaintel/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS_HIGH
@@ -625,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 14:57:52 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 04:22:39 on Sep 13,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -634,18 +644,18 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap cyclonev_hssi_ver ./verilog_libs/cyclonev_hssi_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
+# vlog -vlog01compat -work cyclonev_hssi_ver {e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:53 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
+# Start time: 04:22:43 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 14:57:54 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:22:49 on Sep 13,2023, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
+# vlog -vlog01compat -work cyclonev_hssi_ver {e:/fpgaintel/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:54 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
+# Start time: 04:22:49 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver e:/fpgaintel/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
 # -- Compiling module cyclonev_hssi_8g_tx_pcs
@@ -744,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 14:57:55 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:22:50 on Sep 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -753,24 +763,30 @@
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap cyclonev_pcie_hip_ver ./verilog_libs/cyclonev_pcie_hip_ver 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
+# vlog -vlog01compat -work cyclonev_pcie_hip_ver {e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:55 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
+# Start time: 04:22:53 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver e:/fpgaintel/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
+# ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 14:57:57 on Sep 08,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
+# End time: 04:23:01 on Sep 13,2023, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 6
+# vlog -vlog01compat -work cyclonev_pcie_hip_ver {e:/fpgaintel/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:57 on Sep 08,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/18.1/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
+# Start time: 04:23:02 on Sep 13,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver e:/fpgaintel/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 14:57:58 on Sep 08,2023, Elapsed time: 0:00:01
+# End time: 04:23:02 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -782,46 +798,208 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3 {C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv}
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:58 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3" C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv 
+# Start time: 04:23:03 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv 
+# -- Compiling module sumador_nbits
+# 
+# Top level modules:
+# 	sumador_nbits
+# End time: 04:23:03 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:03 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv 
+# -- Compiling module sumadorCompleto
+# 
+# Top level modules:
+# 	sumadorCompleto
+# End time: 04:23:03 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:04 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv 
+# -- Compiling module restadorCompleto
+# 
+# Top level modules:
+# 	restadorCompleto
+# End time: 04:23:04 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:04 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv 
+# -- Compiling module restador_nbits
+# 
+# Top level modules:
+# 	restador_nbits
+# End time: 04:23:04 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:04 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion.sv 
 # -- Compiling module multiplicacion
 # 
 # Top level modules:
 # 	multiplicacion
-# End time: 14:57:58 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 04:23:04 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3 {C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv}
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:57:58 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3" C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/multiplicacion_tb.sv 
-# -- Compiling module multiplicacion_tb
+# Start time: 04:23:05 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/modulo.sv 
+# -- Compiling module modulo
 # 
 # Top level modules:
-# 	multiplicacion_tb
-# End time: 14:57:58 on Sep 08,2023, Elapsed time: 0:00:00
+# 	modulo
+# End time: 04:23:05 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:05 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/and_compuerta.sv 
+# -- Compiling module and_compuerta
+# 
+# Top level modules:
+# 	and_compuerta
+# End time: 04:23:05 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:05 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/or_compuerta.sv 
+# -- Compiling module or_compuerta
+# 
+# Top level modules:
+# 	or_compuerta
+# End time: 04:23:06 on Sep 13,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:06 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/xor_compuerta.sv 
+# -- Compiling module xor_compuerta
+# 
+# Top level modules:
+# 	xor_compuerta
+# End time: 04:23:06 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:06 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 04:23:06 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:06 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv 
+# -- Compiling module ALU_TB
+# 
+# Top level modules:
+# 	ALU_TB
+# End time: 04:23:07 on Sep 13,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:07 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/Dividir.sv 
+# -- Compiling module Dividir
+# 
+# Top level modules:
+# 	Dividir
+# End time: 04:23:07 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:07 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftBit.sv 
+# -- Compiling module ShiftBit
+# 
+# Top level modules:
+# 	ShiftBit
+# End time: 04:23:07 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:07 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ShiftRight.sv 
+# -- Compiling module ShiftRight
+# 
+# Top level modules:
+# 	ShiftRight
+# End time: 04:23:08 on Sep 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mult
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" mult 
-# Start time: 14:57:58 on Sep 08,2023
-# ** Error: (vsim-3170) Could not find 'mult'.
-#         Searched libraries:
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/altera_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/lpm_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/sgate_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/altera_mf_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/altera_lnsim_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/cyclonev_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/cyclonev_hssi_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/verilog_libs/cyclonev_pcie_hip_ver
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/rtl_work
-#             C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio3/simulation/modelsim/rtl_work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./aluLab3_run_msim_rtl_verilog.do PAUSED at line 52
-# End time: 14:58:36 on Sep 08,2023, Elapsed time: 0:00:38
-# Errors: 1, Warnings: 0
+# vlog -sv -work work +incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3 {E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:23:08 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3" E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv 
+# -- Compiling module ALU_TB
+# 
+# Top level modules:
+# 	ALU_TB
+# End time: 04:23:08 on Sep 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_TB 
+# Start time: 04:23:08 on Sep 13,2023
+# Loading sv_std.std
+# Loading work.ALU_TB
+# Loading work.ALU
+# Loading work.multiplicacion
+# Loading work.modulo
+# Loading work.and_compuerta
+# Loading work.or_compuerta
+# Loading work.xor_compuerta
+# Loading work.restador_nbits
+# Loading work.Dividir
+# Loading work.ShiftRight
+# Loading work.sumador_nbits
+# Loading work.restadorCompleto
+# Loading work.ShiftBit
+# Loading work.sumadorCompleto
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restadorCompleto.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_TB/Alu_TEST/subtractor/generateRestador[0]/genblk1/f File: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/restador_nbits.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'result'. The port definition is at: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_TB/Alu_TEST/adder File: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU.sv Line: 32
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorCompleto.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_TB/Alu_TEST/adder/generateSumador[0]/genblk1/sum_instance_i File: E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/sumadorNbits.sv Line: 20
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# A	B	Sel	Result	Neg	Zero	Cry	OF
+# 1010	0111	0000	01000110	0	0	0	0
+# 1010	0111	0001	00000011	0	0	0	0
+# 1010	0111	0010	00000010	0	0	0	0
+# 1010	0111	0011	00001111	0	0	0	0
+# 1010	0111	0100	00001101	0	0	0	0
+# temp1: 00001100
+# 1100	0100	0110	00000011	1	0	0	0
+# temp1: 00001010
+# 1010	0000	0110	0000xxxx	1	0	0	0
+# temp1: 00001010
+# 1010	0001	1000	00000101	1	0	0	0
+# temp1: 00001100
+# 1100	0010	1000	00000011	1	0	0	0
+# temp1: 00000101
+# 0101	0011	1001	00000000	0	0	0	0
+# 0101	1000	1001	00000001	1	0	1	0
+# ** Note: $stop    : E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv(91)
+#    Time: 110 ps  Iteration: 0  Instance: /ALU_TB
+# Break in Module ALU_TB at E:/tallerDiseno/repo/drayodigital_design-_lab-_2023/laboratorio3/ALU_TB.sv line 91
+# End time: 04:26:51 on Sep 13,2023, Elapsed time: 0:03:43
+# Errors: 0, Warnings: 3
