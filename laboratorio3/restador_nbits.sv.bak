@@ -1,4 +1,4 @@
-module 5
+module restador_nbits
 
 #(parameter N = 4)
 
