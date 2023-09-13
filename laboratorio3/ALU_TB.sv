@@ -77,7 +77,7 @@ module ALU_TB;
         B = 4'b0010;  // Desplazar por 2
         #10; $display("%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b", A, B, sel, result, negativo_bandera, zr_bandera, cry_bandera, of_bandera);
 
-		          // Pruebas para suma
+		  // Pruebas para suma
         sel = 4'b1001;
         A = 4'b0101;  // 5
         B = 4'b0011;  // 3
@@ -88,7 +88,7 @@ module ALU_TB;
         B = 4'b1000;  // 8
         #10; $display("%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b", A, B, sel, result, negativo_bandera, zr_bandera, cry_bandera, of_bandera);
 
-        $stop; // Terminar simulación
+        $stop;
     end
 
 endmodule

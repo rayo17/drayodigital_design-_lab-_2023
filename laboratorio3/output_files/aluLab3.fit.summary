@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Sep 12 23:09:47 2023
+Fitter Status : Successful - Wed Sep 13 09:12:44 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : aluLab3
 Top-level Entity Name : ALU
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 20 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 62 / 32,070 ( < 1 % )
 Total registers : 0
-Total pins : 18 / 457 ( 4 % )
+Total pins : 38 / 457 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

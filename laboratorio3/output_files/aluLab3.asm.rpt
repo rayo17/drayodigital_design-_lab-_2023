@@ -1,5 +1,5 @@
 Assembler report for aluLab3
-Tue Sep 12 23:10:07 2023
+Wed Sep 13 09:13:09 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Sep 12 23:10:07 2023 ;
+; Assembler Status      ; Successful - Wed Sep 13 09:13:09 2023 ;
 ; Revision Name         ; aluLab3                               ;
 ; Top-level Entity Name ; ALU                                   ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                            ;
 +----------------+----------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B001F5                                                                                         ;
-; Checksum       ; 0x00B001F5                                                                                         ;
+; JTAG usercode  ; 0x00B1659C                                                                                         ;
+; Checksum       ; 0x00B1659C                                                                                         ;
 +----------------+----------------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Sep 12 23:09:50 2023
+    Info: Processing started: Wed Sep 13 09:12:49 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off aluLab3 -c aluLab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4882 megabytes
-    Info: Processing ended: Tue Sep 12 23:10:08 2023
-    Info: Elapsed time: 00:00:18
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Wed Sep 13 09:13:09 2023
+    Info: Elapsed time: 00:00:20
     Info: Total CPU time (on all processors): 00:00:17
 
 

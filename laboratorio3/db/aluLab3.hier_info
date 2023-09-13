@@ -1,7 +1,4 @@
-|ALU_TB
-
-
-|ALU_TB|ALU:Alu_TEST
+|ALU
 A[0] => A[0].IN9
 A[1] => A[1].IN9
 A[2] => A[2].IN9
@@ -30,21 +27,35 @@ sel[3] => Mux0.IN7
 sel[3] => Mux1.IN7
 sel[3] => Mux2.IN7
 sel[3] => Mux3.IN6
-result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result.DB_MAX_OUTPUT_PORT_TYPE
-negativo_bandera <= restador_nbits:subtractor.negativo_bandera
-zr_bandera <= restador_nbits:subtractor.zr_bandera
-cry_bandera <= restador_nbits:subtractor.cry_bandera
-of_bandera <= restador_nbits:subtractor.of_bandera
+result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] << result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] << result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] << result[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] << result[7].DB_MAX_OUTPUT_PORT_TYPE
+negativo_bandera << restador_nbits:subtractor.negativo_bandera
+zr_bandera << restador_nbits:subtractor.zr_bandera
+cry_bandera << restador_nbits:subtractor.cry_bandera
+of_bandera << restador_nbits:subtractor.of_bandera
+display1[0] << bin_to_display:dis1.port1
+display1[1] << bin_to_display:dis1.port1
+display1[2] << bin_to_display:dis1.port1
+display1[3] << bin_to_display:dis1.port1
+display1[4] << bin_to_display:dis1.port1
+display1[5] << bin_to_display:dis1.port1
+display1[6] << bin_to_display:dis1.port1
+display2[0] << bin_to_display:dis2.port1
+display2[1] << bin_to_display:dis2.port1
+display2[2] << bin_to_display:dis2.port1
+display2[3] << bin_to_display:dis2.port1
+display2[4] << bin_to_display:dis2.port1
+display2[5] << bin_to_display:dis2.port1
+display2[6] << bin_to_display:dis2.port1
 
 
-|ALU_TB|ALU:Alu_TEST|multiplicacion:multiplier
+|ALU|multiplicacion:multiplier
 A[0] => Mult0.IN3
 A[1] => Mult0.IN2
 A[2] => Mult0.IN1
@@ -63,7 +74,7 @@ mul_out[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 mul_out[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|modulo:mod_operator
+|ALU|modulo:mod_operator
 A[0] => Mod0.IN3
 A[1] => Mod0.IN2
 A[2] => Mod0.IN1
@@ -78,7 +89,7 @@ out_modulo[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 out_modulo[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|and_compuerta:and_gate
+|ALU|and_compuerta:and_gate
 a[0] => out.IN0
 a[1] => out.IN0
 a[2] => out.IN0
@@ -93,7 +104,7 @@ out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|or_compuerta:or_gate
+|ALU|or_compuerta:or_gate
 a[0] => out.IN0
 a[1] => out.IN0
 a[2] => out.IN0
@@ -108,7 +119,7 @@ out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|xor_compuerta:xor_gate
+|ALU|xor_compuerta:xor_gate
 a[0] => out.IN0
 a[1] => out.IN0
 a[2] => out.IN0
@@ -123,7 +134,7 @@ out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|restador_nbits:subtractor
+|ALU|restador_nbits:subtractor
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -142,7 +153,7 @@ cry_bandera <= restadorCompleto:generateRestador[3].f.port4
 of_bandera <= of_bandera.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|restador_nbits:subtractor|restadorCompleto:generateRestador[0].f
+|ALU|restador_nbits:subtractor|restadorCompleto:generateRestador[0].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -153,7 +164,7 @@ resultado <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|restador_nbits:subtractor|restadorCompleto:generateRestador[1].f
+|ALU|restador_nbits:subtractor|restadorCompleto:generateRestador[1].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -164,7 +175,7 @@ resultado <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|restador_nbits:subtractor|restadorCompleto:generateRestador[2].f
+|ALU|restador_nbits:subtractor|restadorCompleto:generateRestador[2].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -175,7 +186,7 @@ resultado <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|restador_nbits:subtractor|restadorCompleto:generateRestador[3].f
+|ALU|restador_nbits:subtractor|restadorCompleto:generateRestador[3].f
 a => u1.IN0
 a => u3.IN0
 b => u1.IN1
@@ -186,7 +197,7 @@ resultado <= u2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= u7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|Dividir:divider
+|ALU|Dividir:divider
 A[0] => Div0.IN3
 A[0] => Mod0.IN3
 A[1] => Div0.IN2
@@ -213,7 +224,7 @@ D[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 D[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|ShiftRight:shifter
+|ALU|ShiftRight:shifter
 Entrada[0] => ShiftBit:CrearShift[0].sll.In
 Entrada[1] => ShiftBit:CrearShift[1].sll.In
 Entrada[2] => ShiftBit:CrearShift[2].sll.In
@@ -240,27 +251,27 @@ Salida[2] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
 Salida[3] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|ShiftRight:shifter|ShiftBit:CrearShift[0].sll
+|ALU|ShiftRight:shifter|ShiftBit:CrearShift[0].sll
 In => Out.DATAIN
 Out <= In.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|ShiftRight:shifter|ShiftBit:CrearShift[1].sll
+|ALU|ShiftRight:shifter|ShiftBit:CrearShift[1].sll
 In => Out.DATAIN
 Out <= In.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|ShiftRight:shifter|ShiftBit:CrearShift[2].sll
+|ALU|ShiftRight:shifter|ShiftBit:CrearShift[2].sll
 In => Out.DATAIN
 Out <= In.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|ShiftRight:shifter|ShiftBit:CrearShift[3].sll
+|ALU|ShiftRight:shifter|ShiftBit:CrearShift[3].sll
 In => Out.DATAIN
 Out <= In.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|sumador_nbits:adder
+|ALU|sumador_nbits:adder
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -279,7 +290,7 @@ cry_bandera <= sumadorCompleto:generateSumador[3].sum_instance_i.port4
 of_bandera <= of_bandera.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|sumador_nbits:adder|sumadorCompleto:generateSumador[0].sum_instance_i
+|ALU|sumador_nbits:adder|sumadorCompleto:generateSumador[0].sum_instance_i
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -290,7 +301,7 @@ result <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|sumador_nbits:adder|sumadorCompleto:generateSumador[1].sum_instance_i
+|ALU|sumador_nbits:adder|sumadorCompleto:generateSumador[1].sum_instance_i
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -301,7 +312,7 @@ result <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|sumador_nbits:adder|sumadorCompleto:generateSumador[2].sum_instance_i
+|ALU|sumador_nbits:adder|sumadorCompleto:generateSumador[2].sum_instance_i
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -312,7 +323,7 @@ result <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_TB|ALU:Alu_TEST|sumador_nbits:adder|sumadorCompleto:generateSumador[3].sum_instance_i
+|ALU|sumador_nbits:adder|sumadorCompleto:generateSumador[3].sum_instance_i
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -321,5 +332,107 @@ c_in => xor2.IN1
 c_in => and1.IN1
 result <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|bin_to_display:dis1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN0
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[2] => segment.IN1
+number[2] => segment.IN0
+number[2] => segment.IN0
+number[2] => segment.IN0
+number[2] => segment.IN1
+number[2] => segment.IN0
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|bin_to_display:dis2
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN0
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[0] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN1
+number[1] => segment.IN0
+number[2] => segment.IN1
+number[2] => segment.IN0
+number[2] => segment.IN0
+number[2] => segment.IN0
+number[2] => segment.IN1
+number[2] => segment.IN0
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+number[3] => segment.IN1
+segment[0] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= segment.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= segment.DB_MAX_OUTPUT_PORT_TYPE
 
 
