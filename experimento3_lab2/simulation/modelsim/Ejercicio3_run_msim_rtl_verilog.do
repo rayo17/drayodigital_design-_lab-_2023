@@ -5,10 +5,10 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Contador.sv}
-vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Interfaz.sv}
+vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv}
+vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv}
 
-vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv}
+vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Contador_tb
 

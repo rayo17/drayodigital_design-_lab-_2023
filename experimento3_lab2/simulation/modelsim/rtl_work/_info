@@ -1,88 +1,92 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/User/Desktop/QuartusProjects/simulation/modelsim
+Z0 dC:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/simulation/modelsim
 vContador
-Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1693010948
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1694575424
 !i10b 1
-!s100 USlGl5NQW[3[HZE4UA`Fe0
-IJOFGCaYOQ`9haZfAQQfiP0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 Contador_sv_unit
+!s100 5>[54h8YmG4ScP_WnofO70
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXhGPZ0=hREK<0E6@P:NE^3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1693010349
-8C:/Users/User/Desktop/QuartusProjects/Contador.sv
-FC:/Users/User/Desktop/QuartusProjects/Contador.sv
-L0 1
-Z4 OV;L;10.5b;63
+8C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv
+FC:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv
+!i122 0
+L0 1 19
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1693010948.000000
-!s107 C:/Users/User/Desktop/QuartusProjects/Contador.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/QuartusProjects|C:/Users/User/Desktop/QuartusProjects/Contador.sv|
+Z6 !s108 1694575424.000000
+!s107 C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2|C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2
+Z9 tCvgOpt 0
 n@contador
 vContador_tb
 R1
 R2
 !i10b 1
-!s100 Ri`CMEh5jddNG_D>7ieLU1
-IYa5o:oCQ:mTL4DSBk_gVn0
+!s100 A:X:I]jm1SG];4Q_9TeXA0
 R3
-!s105 Contador_tb_sv_unit
+IUmBFmCjR@5^NKDo7^jW691
+R4
 S1
 R0
 w1692939664
-8C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv
-FC:/Users/User/Desktop/QuartusProjects/Contador_tb.sv
-L0 2
-R4
+8C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv
+FC:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv
+!i122 2
+L0 2 27
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/QuartusProjects|C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv|
-!i113 1
 R6
+!s107 C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2|C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv|
+!i113 1
 R7
 R8
+R9
 n@contador_tb
 vInterfaz
 R1
 R2
 !i10b 1
-!s100 ?:M1V368Kf[4DiZ]9ngh62
-IgNPJkIB2e`bMaE:iFI4j60
+!s100 6eYZ52>=bbQAdn118Bkib2
 R3
-!s105 Interfaz_sv_unit
+IFzGYh7ka1`<gJPzY=3mH<3
+R4
 S1
 R0
 w1693010780
-8C:/Users/User/Desktop/QuartusProjects/Interfaz.sv
-FC:/Users/User/Desktop/QuartusProjects/Interfaz.sv
-L0 1
-R4
+8C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv
+FC:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv
+!i122 1
+L0 1 41
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/User/Desktop/QuartusProjects/Interfaz.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/QuartusProjects|C:/Users/User/Desktop/QuartusProjects/Interfaz.sv|
-!i113 1
 R6
+!s107 C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2|C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv|
+!i113 1
 R7
 R8
+R9
 n@interfaz

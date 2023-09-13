@@ -1,61 +1,67 @@
-# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do Ejercicio3_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Contador.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:49:08 on Aug 25,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/QuartusProjects" C:/Users/User/Desktop/QuartusProjects/Contador.sv 
+# vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:23:44 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2" C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador.sv 
 # -- Compiling module Contador
 # 
 # Top level modules:
 # 	Contador
-# End time: 18:49:08 on Aug 25,2023, Elapsed time: 0:00:00
+# End time: 21:23:44 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Interfaz.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:49:08 on Aug 25,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/QuartusProjects" C:/Users/User/Desktop/QuartusProjects/Interfaz.sv 
+# vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:23:44 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2" C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Interfaz.sv 
 # -- Compiling module Interfaz
 # 
 # Top level modules:
 # 	Interfaz
-# End time: 18:49:08 on Aug 25,2023, Elapsed time: 0:00:00
+# End time: 21:23:44 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/User/Desktop/QuartusProjects {C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:49:08 on Aug 25,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/User/Desktop/QuartusProjects" C:/Users/User/Desktop/QuartusProjects/Contador_tb.sv 
+# vlog -sv -work work +incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2 {C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:23:44 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2" C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv 
 # -- Compiling module Contador_tb
 # 
 # Top level modules:
 # 	Contador_tb
-# End time: 18:49:08 on Aug 25,2023, Elapsed time: 0:00:00
+# End time: 21:23:44 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Contador_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Contador_tb 
-# Start time: 18:49:08 on Aug 25,2023
+# Start time: 21:23:44 on Sep 12,2023
 # Loading sv_std.std
 # Loading work.Contador_tb
 # Loading work.Contador
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: veron  Hostname: VERONICA-LENOVO  ProcessID: 21804
+#           Attempting to use alternate WLF file "./wlftwk06tw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwk06tw
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# WARNING: No extended dataflow license exists
 # Break key hit
-# Break in Module Contador at C:/Users/User/Desktop/QuartusProjects/Contador.sv line 7
-# End time: 18:49:23 on Aug 25,2023, Elapsed time: 0:00:15
-# Errors: 0, Warnings: 0
+# Break in Module Contador_tb at C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/Contador_tb.sv line 22
+# End time: 21:24:06 on Sep 12,2023, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 2

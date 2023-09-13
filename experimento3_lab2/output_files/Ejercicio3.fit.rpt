@@ -1,6 +1,6 @@
 Fitter report for Ejercicio3
-Fri Aug 25 18:47:15 2023
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Tue Sep 12 21:26:42 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -43,9 +43,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -55,22 +55,23 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Aug 25 18:47:15 2023       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Fitter Status                   ; Successful - Tue Sep 12 21:26:42 2023       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Ejercicio3                                  ;
 ; Top-level Entity Name           ; Interfaz                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 9 / 32,070 ( < 1 % )                        ;
-; Total registers                 ; 10                                          ;
+; Total registers                 ; 12                                          ;
 ; Total pins                      ; 16 / 457 ( 4 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -149,16 +150,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processors 3-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -172,6 +173,8 @@ refer to the applicable agreement for further details.
 ; Contador:test6|count[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Contador:test6|count[1]~DUPLICATE ;                  ;                       ;
 ; Contador:test6|count[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Contador:test6|count[2]~DUPLICATE ;                  ;                       ;
 ; Contador:test6|count[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Contador:test6|count[3]~DUPLICATE ;                  ;                       ;
+; Contador:test6|count[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Contador:test6|count[4]~DUPLICATE ;                  ;                       ;
+; Contador:test6|count[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Contador:test6|count[5]~DUPLICATE ;                  ;                       ;
 +-------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------+------------------+-----------------------+
 
 
@@ -213,7 +216,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_files/Ejercicio3.pin.
+The pin-out file can be found in C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/output_files/Ejercicio3.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -249,13 +252,13 @@ The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_fi
 ;     -- <=3 input functions                                  ; 7                  ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 10                 ;       ;
+; Dedicated logic registers                                   ; 12                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 6 / 64,140         ; < 1 % ;
-;         -- Secondary logic registers                        ; 4 / 64,140         ; < 1 % ;
+;         -- Secondary logic registers                        ; 6 / 64,140         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 6                  ;       ;
-;         -- Routing optimization registers                   ; 4                  ;       ;
+;         -- Routing optimization registers                   ; 6                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 16 / 457           ; 4 %   ;
@@ -312,10 +315,10 @@ The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_fi
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 0.1% / 0.1% / 0.2% ;       ;
-; Maximum fan-out                                             ; 10                 ;       ;
-; Highest non-global fan-out                                  ; 10                 ;       ;
-; Total fan-out                                               ; 115                ;       ;
-; Average fan-out                                             ; 1.92               ;       ;
+; Maximum fan-out                                             ; 12                 ;       ;
+; Highest non-global fan-out                                  ; 12                 ;       ;
+; Total fan-out                                               ; 121                ;       ;
+; Average fan-out                                             ; 1.95               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -358,10 +361,10 @@ The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_fi
 ; Dedicated logic registers                                   ; 0                   ; 0                              ;
 ;     -- By type:                                             ;                     ;                                ;
 ;         -- Primary logic registers                          ; 6 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 4 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 6 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                     ;                                ;
 ;         -- Design implementation registers                  ; 6                   ; 0                              ;
-;         -- Routing optimization registers                   ; 4                   ; 0                              ;
+;         -- Routing optimization registers                   ; 6                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ;                                                             ;                     ;                                ;
 ; Virtual pins                                                ; 0                   ; 0                              ;
@@ -378,7 +381,7 @@ The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_fi
 ;     -- Registered Output Connections                        ; 0                   ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; Internal Connections                                        ;                     ;                                ;
-;     -- Total Connections                                    ; 115                 ; 0                              ;
+;     -- Total Connections                                    ; 121                 ; 0                              ;
 ;     -- Registered Connections                               ; 57                  ; 0                              ;
 ;                                                             ;                     ;                                ;
 ; External Connections                                        ;                     ;                                ;
@@ -411,8 +414,8 @@ The pin-out file can be found in C:/Users/User/Desktop/QuartusProjects/output_fi
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 10                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; reset ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 12                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; reset ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 12                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -1394,8 +1397,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+-------------+--------------+
-; |Interfaz                  ; 9.0 (4.8)            ; 9.0 (4.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (11)             ; 10 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 16   ; 0            ; |Interfaz                ; Interfaz    ; work         ;
-;    |Contador:test6|        ; 3.7 (3.7)            ; 4.2 (4.2)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Interfaz|Contador:test6 ; Contador    ; work         ;
+; |Interfaz                  ; 9.0 (4.8)            ; 9.0 (4.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (11)             ; 12 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 16   ; 0            ; |Interfaz                ; Interfaz    ; work         ;
+;    |Contador:test6|        ; 3.7 (3.7)            ; 4.3 (4.3)                        ; 0.6 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Interfaz|Contador:test6 ; Contador    ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1438,6 +1441,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Contador:test6|count[1]           ; 1                 ; 0       ;
 ;      - Contador:test6|count[2]           ; 1                 ; 0       ;
 ;      - Contador:test6|count[3]           ; 1                 ; 0       ;
+;      - Contador:test6|count[5]~DUPLICATE ; 1                 ; 0       ;
+;      - Contador:test6|count[4]~DUPLICATE ; 1                 ; 0       ;
 ;      - Contador:test6|count[0]~DUPLICATE ; 1                 ; 0       ;
 ;      - Contador:test6|count[1]~DUPLICATE ; 1                 ; 0       ;
 ;      - Contador:test6|count[2]~DUPLICATE ; 1                 ; 0       ;
@@ -1450,8 +1455,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clk   ; PIN_AA14 ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; reset ; PIN_AC12 ; 10      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk   ; PIN_AA14 ; 12      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; reset ; PIN_AC12 ; 12      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1460,7 +1465,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_AA14 ; 10      ; Global Clock         ; GCLK6            ; --                        ;
+; clk  ; PIN_AA14 ; 12      ; Global Clock         ; GCLK6            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1469,14 +1474,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 24 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 23 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 1 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 15 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 8 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 21 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 5 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 4 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 6 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1532,12 +1537,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 5 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 6 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
 ; R14 interconnects                           ; 6 / 12,676 ( < 1 % )   ;
 ; R14/C12 interconnect drivers                ; 6 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 5 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 4 / 266,960 ( < 1 % )  ;
+; R3 interconnects                            ; 8 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 7 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )      ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1680,11 +1685,11 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------+-------------------------+-------------------+
 ; Source Register         ; Destination Register    ; Delay Added in ns ;
 +-------------------------+-------------------------+-------------------+
-; Contador:test6|count[1] ; Contador:test6|count[5] ; 0.251             ;
-; Contador:test6|count[0] ; Contador:test6|count[5] ; 0.250             ;
-; Contador:test6|count[4] ; Contador:test6|count[5] ; 0.206             ;
-; Contador:test6|count[2] ; Contador:test6|count[3] ; 0.187             ;
-; Contador:test6|count[3] ; Contador:test6|count[4] ; 0.161             ;
+; Contador:test6|count[1] ; Contador:test6|count[5] ; 0.248             ;
+; Contador:test6|count[0] ; Contador:test6|count[5] ; 0.245             ;
+; Contador:test6|count[4] ; Contador:test6|count[5] ; 0.202             ;
+; Contador:test6|count[2] ; Contador:test6|count[3] ; 0.183             ;
+; Contador:test6|count[3] ; Contador:test6|count[4] ; 0.158             ;
 +-------------------------+-------------------------+-------------------+
 Note: This table only shows the top 5 path(s) that have the largest delay added for hold.
 
@@ -1693,7 +1698,7 @@ Note: This table only shows the top 5 path(s) that have the largest delay added 
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "Ejercicio3"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1729,23 +1734,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file C:/Users/User/Desktop/QuartusProjects/output_files/Ejercicio3.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/output_files/Ejercicio3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6744 megabytes
-    Info: Processing ended: Fri Aug 25 18:47:16 2023
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 6556 megabytes
+    Info: Processing ended: Tue Sep 12 21:26:42 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/User/Desktop/QuartusProjects/output_files/Ejercicio3.fit.smsg.
+The suppressed messages can be found in C:/Users/veron/Documents/GitHub/drayodigital_design-_lab-_2023/experimento3_lab2/output_files/Ejercicio3.fit.smsg.
 
 
