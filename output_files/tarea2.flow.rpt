@@ -1,5 +1,5 @@
 Flow report for tarea2
-Mon Oct  2 10:29:18 2023
+Mon Oct  2 09:11:33 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Mon Oct  2 10:29:18 2023          ;
+; Flow Status                 ; Flow Failed - Mon Oct  2 09:11:33 2023         ;
 ; Quartus Prime Version       ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name               ; tarea2                                         ;
 ; Top-level Entity Name       ; SistemaControl_tb                              ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2023 10:29:06 ;
+; Start date & time ; 10/02/2023 09:11:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tarea2              ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name       ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 79846615827135.169626414516468         ; --            ; --                ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 79846615827135.169625948113832         ; --            ; --                ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                ; SistemaControl_tb                 ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                ; eda_board_design_boundary_scan    ;
@@ -82,7 +82,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --                ; eda_board_design_symbol           ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SistemaControl_tb                      ; --            ; --                ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --                ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --                ; --                                ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                     ; <None>        ; --                ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; SistemaControl_tb.sv                   ; --            ; --                ; SistemaControl_tb                 ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; SistemaControl_tb                      ; --            ; --                ; SistemaControl_tb                 ;
@@ -105,8 +105,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4782 MB             ; 00:00:10                           ;
-; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4783 MB             ; 00:00:12                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:12                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

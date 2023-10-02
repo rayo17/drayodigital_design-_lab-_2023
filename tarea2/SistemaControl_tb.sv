@@ -1,57 +1,51 @@
-`timescale 1ns / 1ps
-
 module SistemaControl_tb;
 
-  reg reloj;
-  reg boton_presionado;
-  reg reset;
-  wire [1:0] estado_actual;
-  wire error_flag;
-  wire [7:0] estado_registro;
-  
-  // Instancia del módulo a probar
-  SistemaControl uut (
-    .reloj(reloj),
-    .boton_presionado(boton_presionado),
-    .reset(reset),
-    .estado_actual(estado_actual),
-    .error_flag(error_flag),
-    .estado_registro(estado_registro)
-  );
+  reg clk;
+  reg rst;
+  reg btnPresionado;
+  wire [7:0] estado;
 
   initial begin
-    reloj = 0;
-    boton_presionado = 0;
-    reset = 0;
+    // Inicializa las señales
+    clk = 0;
+    rst = 0;
+    btnPresionado = 0;
 
-    // Inicializamos las señales
-    estado_actual = 2'b00;
-    error_flag = 1'b0;
-    estado_registro = 8'b00000000;
+    // Realiza un reset manual
+    rst = 1;
+    #10 rst = 0;
 
-    // Comenzamos la simulación
-    #10 reset = 1; // Activa el reset
-    #10 reset = 0; // Desactiva el reset
+    // Presiona el botón durante 200 ciclos
+    btnPresionado = 1;
+    #200 btnPresionado = 0;
 
-    // Simulamos el mantenimiento
-    boton_presionado = 1;
-    #10 boton_presionado = 0;
-    #10 boton_presionado = 1;
-    #10 boton_presionado = 0;
+    // Presiona el botón nuevamente después de un tiempo
+    #10 btnPresionado = 1;
 
-    // Simulamos la espera hasta el error
-    #200;
+    // Espera un tiempo
+    #50;
 
-    // Simulamos un reset manual
-    reset = 1;
-    #10 reset = 0;
-
-    // Terminamos la simulación
+    // Termina la simulación
     $finish;
   end
 
+  // Simulación del reloj
   always begin
-    #5 reloj = ~reloj; // Genera el pulso del reloj
+    #5 clk = ~clk;
+  end
+
+  // Instancia del módulo
+  SistemaControl dut (
+    .clk(clk),
+    .rst(rst),
+    .btnPresionado(btnPresionado),
+    .estado(estado)
+  );
+
+  // Visualización de resultados
+  always @(posedge clk) begin
+    $display("Estado: %h", estado);
   end
 
 endmodule
+

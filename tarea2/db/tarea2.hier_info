@@ -1,6 +1,68 @@
 |SistemaControl_tb
 
 
-|SistemaControl_tb|SistemaControl:uut
+|SistemaControl_tb|SistemaControl:dut
+clk => estado[0]~reg0.CLK
+clk => estado[1]~reg0.CLK
+clk => estado[2]~reg0.CLK
+clk => estado[3]~reg0.CLK
+clk => estado[4]~reg0.CLK
+clk => estado[5]~reg0.CLK
+clk => estado[6]~reg0.CLK
+clk => estado[7]~reg0.CLK
+clk => contador_mantenimiento[0].CLK
+clk => contador_mantenimiento[1].CLK
+clk => contador_mantenimiento[2].CLK
+clk => contador_mantenimiento[3].CLK
+clk => contador_mantenimiento[4].CLK
+clk => contador_mantenimiento[5].CLK
+clk => contador_mantenimiento[6].CLK
+clk => contador_mantenimiento[7].CLK
+clk => estado_actual~3.DATAIN
+rst => estado[0]~reg0.ACLR
+rst => estado[1]~reg0.ACLR
+rst => estado[2]~reg0.ACLR
+rst => estado[3]~reg0.ACLR
+rst => estado[4]~reg0.ACLR
+rst => estado[5]~reg0.ACLR
+rst => estado[6]~reg0.ACLR
+rst => estado[7]~reg0.ACLR
+rst => contador_mantenimiento[0].ACLR
+rst => contador_mantenimiento[1].ACLR
+rst => contador_mantenimiento[2].ACLR
+rst => contador_mantenimiento[3].ACLR
+rst => contador_mantenimiento[4].ACLR
+rst => contador_mantenimiento[5].ACLR
+rst => contador_mantenimiento[6].ACLR
+rst => contador_mantenimiento[7].ACLR
+rst => estado_actual~5.DATAIN
+btnPresionado => estado_actual.OUTPUTSELECT
+btnPresionado => estado_actual.OUTPUTSELECT
+btnPresionado => estado_actual.OUTPUTSELECT
+btnPresionado => estado_actual.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => estado.OUTPUTSELECT
+btnPresionado => contador_mantenimiento[7].ENA
+btnPresionado => contador_mantenimiento[6].ENA
+btnPresionado => contador_mantenimiento[5].ENA
+btnPresionado => contador_mantenimiento[4].ENA
+btnPresionado => contador_mantenimiento[3].ENA
+btnPresionado => contador_mantenimiento[2].ENA
+btnPresionado => contador_mantenimiento[1].ENA
+btnPresionado => contador_mantenimiento[0].ENA
+estado[0] <= estado[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= estado[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= estado[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= estado[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[4] <= estado[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[5] <= estado[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[6] <= estado[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+estado[7] <= estado[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
