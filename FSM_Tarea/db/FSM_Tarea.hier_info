@@ -1,0 +1,54 @@
+|FSM_tb
+
+
+|FSM_tb|maquinaMante:dut
+m => sigEstado.01.DATAB
+m => sigEstado.10.DATAB
+clk => clk.IN1
+rst => rst.IN1
+enable_mant <= enable_mant.DB_MAX_OUTPUT_PORT_TYPE
+mux_error <= mux_error.DB_MAX_OUTPUT_PORT_TYPE
+msj <= Mux:Mux.msj
+
+
+|FSM_tb|maquinaMante:dut|Contador_mant:Contador_mant
+clk => contAux[0].CLK
+clk => contAux[1].CLK
+clk => contAux[2].CLK
+clk => contAux[3].CLK
+clk => contAux[4].CLK
+clk => contAux[5].CLK
+clk => contAux[6].CLK
+clk => contAux[7].CLK
+reset => contAux[0].ACLR
+reset => contAux[1].ACLR
+reset => contAux[2].ACLR
+reset => contAux[3].ACLR
+reset => contAux[4].ACLR
+reset => contAux[5].ACLR
+reset => contAux[6].ACLR
+reset => contAux[7].ACLR
+enable_mant => contAux[7].ENA
+enable_mant => contAux[6].ENA
+enable_mant => contAux[5].ENA
+enable_mant => contAux[4].ENA
+enable_mant => contAux[3].ENA
+enable_mant => contAux[2].ENA
+enable_mant => contAux[1].ENA
+enable_mant => contAux[0].ENA
+contMant[0] <= contAux[0].DB_MAX_OUTPUT_PORT_TYPE
+contMant[1] <= contAux[1].DB_MAX_OUTPUT_PORT_TYPE
+contMant[2] <= contAux[2].DB_MAX_OUTPUT_PORT_TYPE
+contMant[3] <= contAux[3].DB_MAX_OUTPUT_PORT_TYPE
+contMant[4] <= contAux[4].DB_MAX_OUTPUT_PORT_TYPE
+contMant[5] <= contAux[5].DB_MAX_OUTPUT_PORT_TYPE
+contMant[6] <= contAux[6].DB_MAX_OUTPUT_PORT_TYPE
+contMant[7] <= contAux[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FSM_tb|maquinaMante:dut|Mux:Mux
+x => msj.DATAB
+s => msj.OUTPUTSELECT
+msj <= msj.DB_MAX_OUTPUT_PORT_TYPE
+
+

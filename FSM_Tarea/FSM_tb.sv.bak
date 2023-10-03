@@ -1,0 +1,59 @@
+module testbench;
+
+  // Definir los señales de entrada y salida
+  reg x, clk, rst;
+  wire enable_mant, mux_error, t;
+
+  // Instancia del módulo FSM
+  F dut (
+    .x(x),
+    .t(t),
+    .clk(clk),
+    .rst(rst),
+    .enable_mant(enable_mant),
+    .mux_error(mux_error)
+  );
+
+  // Generar señales de reloj
+  always begin
+    #5 clk = ~clk; // Alternar el reloj cada 5 unidades de tiempo
+  end
+
+  // Proceso para aplicar reset y entrada
+  initial begin
+    clk = 0;
+    rst = 1;
+    x = 0;
+
+    // Esperar un tiempo y luego desactivar el reset
+    #10 rst = 0;
+
+    // Ciclo de prueba
+    x = 1; // Establecer la entrada en 1
+    #20;
+    x = 0; // Cambiar la entrada a 0
+    #20;
+    $finish; // Finalizar la simulación
+  end
+
+  // Procesos para mostrar resultados
+  initial begin
+    $monitor("Time=%0t x=%b t=%b enable_mant=%b mux_error=%b", $time, x, t, enable_mant, mux_error);
+  end
+
+endmodule
+
+// Simulación
+initial begin
+  $dumpfile("dump.vcd");
+  $dumpvars(0, testbench);
+  $display("Starting simulation...");
+  $timeformat(-9, 1, " ns", 10);
+  $timestart;
+  // Ejecutar la simulación durante 100 unidades de tiempo
+  #100;
+  $display("Simulation finished.");
+  $finish;
+end
+
+endmodule

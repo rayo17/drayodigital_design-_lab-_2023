@@ -1,0 +1,7 @@
+module Mux(input x, s, output msj);
+
+msj_error= "0xFF";
+assign msj = ? x : msj_error;
+
+endmodule
+

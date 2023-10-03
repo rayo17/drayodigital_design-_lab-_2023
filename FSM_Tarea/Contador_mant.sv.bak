@@ -1,0 +1,44 @@
+module Contador_mant(input reset, input clk, input enable_mant, output response);
+
+  /*reg [7:0] contClock;
+  reg [1:0] state;
+  logic t;
+
+  always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+      contClock <= 8'b00000000;
+      //state <= 2'b00; 
+    end else begin if  enable_mant
+      contClock <= contClock + 1;
+
+      if (state == 2'b01) begin
+        contMant <= contMant + 1;
+        contClock <= 8'b00000000;
+        $display("enable_mant");
+      end
+
+      if (state == 2'b11) begin
+        $display("mux_error");
+      end
+
+      if (state == 2'b10) begin
+        if (contClock == 8'b11001000) begin //200
+          t = 1'b1;
+        end
+        else begin
+          t = 1'b0;
+        end
+      end
+
+      if (enable_mant) begin
+        state <= 2'b01;
+      end
+      else if (clk) begin
+        state <= 2'b10;
+      end
+    end
+  end
+  
+  assign response = t;*/
+
+endmodule

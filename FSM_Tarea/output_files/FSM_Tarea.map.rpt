@@ -1,0 +1,230 @@
+Analysis & Elaboration report for FSM_Tarea
+Mon Oct  2 18:37:35 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: maquinaMante:dut|Mux:Mux
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "maquinaMante:dut|Contador_mant:Contador_mant"
+  7. Port Connectivity Checks: "maquinaMante:dut"
+  8. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Oct  2 18:37:35 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                 ; FSM_Tarea                                      ;
+; Top-level Entity Name         ; FSM_tb                                         ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: maquinaMante:dut|Mux:Mux ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; msj_error      ; 11111111 ; Unsigned Binary                           ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; FSM_tb             ; FSM_Tarea          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaMante:dut|Contador_mant:Contador_mant"                                                                                   ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                     ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; contMant ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "contMant[7..1]" have no fanouts ;
+; contMant ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaMante:dut"                                                                                               ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; enable_mant ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; mux_error   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; msj         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Mon Oct  2 18:37:30 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM_Tarea -c FSM_Tarea --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file maquinamante.sv
+    Info (12023): Found entity 1: maquinaMante File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/maquinaMante.sv Line: 1
+Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/Mux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
+    Info (12023): Found entity 1: Mux File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/Mux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador_mant.sv
+    Info (12023): Found entity 1: Contador_mant File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/Contador_mant.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_tb.sv
+    Info (12023): Found entity 1: FSM_tb File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/FSM_tb.sv Line: 1
+Info (12127): Elaborating entity "FSM_tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at FSM_tb.sv(18): assignments to clk create a combinational loop File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/FSM_tb.sv Line: 18
+Warning (10175): Verilog HDL warning at FSM_tb.sv(37): ignoring unsupported system task File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/FSM_tb.sv Line: 37
+Info (12128): Elaborating entity "maquinaMante" for hierarchy "maquinaMante:dut" File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/FSM_tb.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at maquinaMante.sv(17): truncated value with size 32 to match size of target (8) File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/maquinaMante.sv Line: 17
+Info (10264): Verilog HDL Case Statement information at maquinaMante.sv(54): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/maquinaMante.sv Line: 54
+Info (12128): Elaborating entity "Contador_mant" for hierarchy "maquinaMante:dut|Contador_mant:Contador_mant" File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/maquinaMante.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at Contador_mant.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/Contador_mant.sv Line: 15
+Info (12128): Elaborating entity "Mux" for hierarchy "maquinaMante:dut|Mux:Mux" File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/maquinaMante.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at Mux.sv(4): truncated value with size 8 to match size of target (1) File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/Mux.sv Line: 4
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/User/Desktop/drayodigital_design-_lab-_2023/FSM_Tarea/FSM_tb.sv Line: 4
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Mon Oct  2 18:37:35 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

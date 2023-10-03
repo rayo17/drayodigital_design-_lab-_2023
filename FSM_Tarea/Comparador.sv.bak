@@ -1,0 +1,10 @@
+module Comparador(input count_clock, output t);
+
+always @* begin
+  if(count_clock < 200) 
+    t = 0;
+  else
+    t = 1;
+end
+ 
+endmodule
