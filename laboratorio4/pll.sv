@@ -4,6 +4,11 @@ module pll (
 );
 
     logic toggle;
+	 
+	 initial begin
+		toggle = 0;
+	 end
+
 
     // Flip-flop para dividir por 2
     always @(posedge inclk0) begin

@@ -1,29 +1,33 @@
-Analysis & Elaboration report for buscaminas
-Fri Oct  6 11:47:41 2023
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Analysis & Synthesis report for buscaminas
+Fri Oct 06 14:41:54 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |tb_vga
-  5. Parameter Settings for User Entity Instance: vga:uut|vgaController:vgaCont
-  6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "vga:uut|videoGen:videoGen|rectgen:rectgen"
-  8. Port Connectivity Checks: "vga:uut"
-  9. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: vgaController:vgaCont
+ 10. Port Connectivity Checks: "videoGen:videoGen|rectgen:rectgen_inst"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,81 +37,40 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Oct  6 11:47:41 2023          ;
-; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                 ; buscaminas                                     ;
-; Top-level Entity Name         ; tb_vga                                         ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |tb_vga ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; CLK_PERIOD     ; 20    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vga:uut|vgaController:vgaCont ;
-+----------------+------------+----------------------------------------------+
-; Parameter Name ; Value      ; Type                                         ;
-+----------------+------------+----------------------------------------------+
-; HACTIVE        ; 1010000000 ; Unsigned Binary                              ;
-; HFP            ; 0000010000 ; Unsigned Binary                              ;
-; HSYN           ; 0001100000 ; Unsigned Binary                              ;
-; HBP            ; 0000110000 ; Unsigned Binary                              ;
-; HMAX           ; 1100100000 ; Unsigned Binary                              ;
-; VBP            ; 0000100000 ; Unsigned Binary                              ;
-; VACTIVE        ; 0111100000 ; Unsigned Binary                              ;
-; VFP            ; 0000001011 ; Unsigned Binary                              ;
-; VSYN           ; 0000000010 ; Unsigned Binary                              ;
-; VMAX           ; 1000001101 ; Unsigned Binary                              ;
-+----------------+------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Oct 06 14:41:54 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; buscaminas                                  ;
+; Top-level Entity Name           ; vga                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 21                                          ;
+; Total pins                      ; 30                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; tb_vga             ; buscaminas         ;
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; vga                ; buscaminas         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -188,89 +151,229 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "vga:uut|videoGen:videoGen|rectgen:rectgen" ;
-+-------------+-------+----------+--------------------------------------+
-; Port        ; Type  ; Severity ; Details                              ;
-+-------------+-------+----------+--------------------------------------+
-; left[6..3]  ; Input ; Info     ; Stuck at VCC                         ;
-; left[9..7]  ; Input ; Info     ; Stuck at GND                         ;
-; left[2..0]  ; Input ; Info     ; Stuck at GND                         ;
-; top[2..1]   ; Input ; Info     ; Stuck at VCC                         ;
-; top[9..8]   ; Input ; Info     ; Stuck at GND                         ;
-; top[6..5]   ; Input ; Info     ; Stuck at GND                         ;
-; top[7]      ; Input ; Info     ; Stuck at VCC                         ;
-; top[4]      ; Input ; Info     ; Stuck at VCC                         ;
-; top[3]      ; Input ; Info     ; Stuck at GND                         ;
-; top[0]      ; Input ; Info     ; Stuck at GND                         ;
-; right[7..6] ; Input ; Info     ; Stuck at VCC                         ;
-; right[9..8] ; Input ; Info     ; Stuck at GND                         ;
-; right[5..4] ; Input ; Info     ; Stuck at GND                         ;
-; right[2..0] ; Input ; Info     ; Stuck at GND                         ;
-; right[3]    ; Input ; Info     ; Stuck at VCC                         ;
-; bot[7..5]   ; Input ; Info     ; Stuck at VCC                         ;
-; bot[2..1]   ; Input ; Info     ; Stuck at VCC                         ;
-; bot[9..8]   ; Input ; Info     ; Stuck at GND                         ;
-; bot[4..3]   ; Input ; Info     ; Stuck at GND                         ;
-; bot[0]      ; Input ; Info     ; Stuck at GND                         ;
-+-------------+-------+----------+--------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga:uut"                                                                               ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; vgaclk  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; hsync   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; vsync   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; sync_b  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; blank_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; r       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; g       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; b       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv           ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv      ;         ;
+; rectgen.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv       ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv           ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimate of Logic utilization (ALMs needed) ; 20                ;
+;                                             ;                   ;
+; Combinational ALUT usage for logic          ; 35                ;
+;     -- 7 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 4                 ;
+;     -- 5 input functions                    ; 4                 ;
+;     -- 4 input functions                    ; 5                 ;
+;     -- <=3 input functions                  ; 22                ;
+;                                             ;                   ;
+; Dedicated logic registers                   ; 21                ;
+;                                             ;                   ;
+; I/O pins                                    ; 30                ;
+;                                             ;                   ;
+; Total DSP Blocks                            ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; pll:vgapll|toggle ;
+; Maximum fan-out                             ; 22                ;
+; Total fan-out                               ; 221               ;
+; Average fan-out                             ; 1.91              ;
++---------------------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+---------------+--------------+
+; |vga                         ; 35 (0)              ; 21 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |vga                                        ; vga           ; work         ;
+;    |pll:vgapll|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                             ; pll           ; work         ;
+;    |vgaController:vgaCont|   ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                  ; vgaController ; work         ;
+;    |videoGen:videoGen|       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen                      ; videoGen      ; work         ;
+;       |rectgen:rectgen_inst| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen|rectgen:rectgen_inst ; rectgen       ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vgaController:vgaCont ;
++----------------+------------+--------------------------------------+
+; Parameter Name ; Value      ; Type                                 ;
++----------------+------------+--------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                      ;
+; HFP            ; 0000010000 ; Unsigned Binary                      ;
+; HSYN           ; 0001100000 ; Unsigned Binary                      ;
+; HBP            ; 0000110000 ; Unsigned Binary                      ;
+; HMAX           ; 1100100000 ; Unsigned Binary                      ;
+; VBP            ; 0000100001 ; Unsigned Binary                      ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                      ;
+; VFP            ; 0000001010 ; Unsigned Binary                      ;
+; VSYN           ; 0000000010 ; Unsigned Binary                      ;
+; VMAX           ; 1000001101 ; Unsigned Binary                      ;
++----------------+------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "videoGen:videoGen|rectgen:rectgen_inst" ;
++-------------+-------+----------+-----------------------------------+
+; Port        ; Type  ; Severity ; Details                           ;
++-------------+-------+----------+-----------------------------------+
+; left[6..3]  ; Input ; Info     ; Stuck at VCC                      ;
+; left[9..7]  ; Input ; Info     ; Stuck at GND                      ;
+; left[2..0]  ; Input ; Info     ; Stuck at GND                      ;
+; top[2..1]   ; Input ; Info     ; Stuck at VCC                      ;
+; top[9..8]   ; Input ; Info     ; Stuck at GND                      ;
+; top[6..5]   ; Input ; Info     ; Stuck at GND                      ;
+; top[7]      ; Input ; Info     ; Stuck at VCC                      ;
+; top[4]      ; Input ; Info     ; Stuck at VCC                      ;
+; top[3]      ; Input ; Info     ; Stuck at GND                      ;
+; top[0]      ; Input ; Info     ; Stuck at GND                      ;
+; right[7..6] ; Input ; Info     ; Stuck at VCC                      ;
+; right[9..8] ; Input ; Info     ; Stuck at GND                      ;
+; right[5..4] ; Input ; Info     ; Stuck at GND                      ;
+; right[2..0] ; Input ; Info     ; Stuck at GND                      ;
+; right[3]    ; Input ; Info     ; Stuck at VCC                      ;
+; bot[7..5]   ; Input ; Info     ; Stuck at VCC                      ;
+; bot[2..1]   ; Input ; Info     ; Stuck at VCC                      ;
+; bot[9..8]   ; Input ; Info     ; Stuck at GND                      ;
+; bot[4..3]   ; Input ; Info     ; Stuck at GND                      ;
+; bot[0]      ; Input ; Info     ; Stuck at GND                      ;
++-------------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 21                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 37                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 17                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.85                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Oct  6 11:47:22 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas --analysis_and_elaboration
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Oct 06 14:41:46 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 1
+    Info (12023): Found entity 1: vga File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 1
+    Info (12023): Found entity 1: videoGen File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv Line: 1
+    Info (12023): Found entity 1: rectgen File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv Line: 1
+    Info (12023): Found entity 1: pll File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_vga.sv
-    Info (12023): Found entity 1: tb_vga File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 1
-Info (12127): Elaborating entity "tb_vga" for the top level hierarchy
-Warning (10755): Verilog HDL warning at tb_vga.sv(27): assignments to clk create a combinational loop File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 27
-Warning (10175): Verilog HDL warning at tb_vga.sv(36): ignoring unsupported system task File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 36
-Warning (10175): Verilog HDL warning at tb_vga.sv(42): ignoring unsupported system task File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 42
-Info (12128): Elaborating entity "vga" for hierarchy "vga:uut" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 23
-Info (12128): Elaborating entity "pll" for hierarchy "vga:uut|pll:vgapll" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 13
-Info (12128): Elaborating entity "vgaController" for hierarchy "vga:uut|vgaController:vgaCont" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 15
-Info (12128): Elaborating entity "videoGen" for hierarchy "vga:uut|videoGen:videoGen" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 17
-Warning (10858): Verilog HDL warning at videoGen.sv(2): object pixel used but never assigned File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 2
-Warning (10030): Net "pixel" at videoGen.sv(2) has no driver or initial value, using a default initial value '0' File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 2
-Info (12128): Elaborating entity "rectgen" for hierarchy "vga:uut|videoGen:videoGen|rectgen:rectgen" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 7
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 7
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Fri Oct  6 11:47:41 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:39
+    Info (12023): Found entity 1: tb_vga File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 1
+Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 13
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 15
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen" File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 17
+Info (12128): Elaborating entity "rectgen" for hierarchy "videoGen:videoGen|rectgen:rectgen_inst" File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 5
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[4]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[6]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "r[7]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[2]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[4]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[5]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[6]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+    Warning (13410): Pin "b[7]" is stuck at GND File: C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 55 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Fri Oct 06 14:41:54 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

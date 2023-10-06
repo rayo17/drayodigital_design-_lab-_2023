@@ -3,14 +3,20 @@ HFP = 10'd16,
 HSYN = 10'd96,
 HBP = 10'd48,
 HMAX = HACTIVE + HFP + HSYN + HBP,
-VBP = 10'd32,
+VBP = 10'd33,
 VACTIVE = 10'd480,
-VFP = 10'd11,
+VFP = 10'd10,
 VSYN = 10'd2,
 VMAX = VACTIVE + VFP + VSYN + VBP)
 (input logic vgaclk,
 output logic hsync, vsync, sync_b, blank_b,
 output logic [9:0] x, y);
+
+initial begin
+    x = 0;
+    y = 0;
+end
+
 
 // counters for horizontal and vertical positions
 always @(posedge vgaclk) begin

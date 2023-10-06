@@ -1,45 +1,42 @@
-|tb_vga
-
-
-|tb_vga|vga:uut
+|vga
 clk => clk.IN1
-vgaclk <= vgaclk.DB_MAX_OUTPUT_PORT_TYPE
-hsync <= vgaController:vgaCont.port1
-vsync <= vgaController:vgaCont.port2
-sync_b <= vgaController:vgaCont.port3
-blank_b <= vgaController:vgaCont.port4
-r[0] <= videoGen:videoGen.port2
-r[1] <= videoGen:videoGen.port2
-r[2] <= videoGen:videoGen.port2
-r[3] <= videoGen:videoGen.port2
-r[4] <= videoGen:videoGen.port2
-r[5] <= videoGen:videoGen.port2
-r[6] <= videoGen:videoGen.port2
-r[7] <= videoGen:videoGen.port2
-g[0] <= videoGen:videoGen.port3
-g[1] <= videoGen:videoGen.port3
-g[2] <= videoGen:videoGen.port3
-g[3] <= videoGen:videoGen.port3
-g[4] <= videoGen:videoGen.port3
-g[5] <= videoGen:videoGen.port3
-g[6] <= videoGen:videoGen.port3
-g[7] <= videoGen:videoGen.port3
-b[0] <= videoGen:videoGen.port4
-b[1] <= videoGen:videoGen.port4
-b[2] <= videoGen:videoGen.port4
-b[3] <= videoGen:videoGen.port4
-b[4] <= videoGen:videoGen.port4
-b[5] <= videoGen:videoGen.port4
-b[6] <= videoGen:videoGen.port4
-b[7] <= videoGen:videoGen.port4
+vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
+hsync << vgaController:vgaCont.port1
+vsync << vgaController:vgaCont.port2
+sync_b << vgaController:vgaCont.port3
+blank_b << vgaController:vgaCont.port4
+r[0] << videoGen:videoGen.port2
+r[1] << videoGen:videoGen.port2
+r[2] << videoGen:videoGen.port2
+r[3] << videoGen:videoGen.port2
+r[4] << videoGen:videoGen.port2
+r[5] << videoGen:videoGen.port2
+r[6] << videoGen:videoGen.port2
+r[7] << videoGen:videoGen.port2
+g[0] << videoGen:videoGen.port3
+g[1] << videoGen:videoGen.port3
+g[2] << videoGen:videoGen.port3
+g[3] << videoGen:videoGen.port3
+g[4] << videoGen:videoGen.port3
+g[5] << videoGen:videoGen.port3
+g[6] << videoGen:videoGen.port3
+g[7] << videoGen:videoGen.port3
+b[0] << videoGen:videoGen.port4
+b[1] << videoGen:videoGen.port4
+b[2] << videoGen:videoGen.port4
+b[3] << videoGen:videoGen.port4
+b[4] << videoGen:videoGen.port4
+b[5] << videoGen:videoGen.port4
+b[6] << videoGen:videoGen.port4
+b[7] << videoGen:videoGen.port4
 
 
-|tb_vga|vga:uut|pll:vgapll
+|vga|pll:vgapll
 inclk0 => toggle.CLK
 c0 <= toggle.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_vga|vga:uut|vgaController:vgaCont
+|vga|vgaController:vgaCont
 vgaclk => y[0]~reg0.CLK
 vgaclk => y[1]~reg0.CLK
 vgaclk => y[2]~reg0.CLK
@@ -86,7 +83,7 @@ y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb_vga|vga:uut|videoGen:videoGen
+|vga|videoGen:videoGen
 x[0] => x[0].IN1
 x[1] => x[1].IN1
 x[2] => x[2].IN1
@@ -115,14 +112,14 @@ r[4] <= <GND>
 r[5] <= <GND>
 r[6] <= <GND>
 r[7] <= <GND>
-g[0] <= rectgen:rectgen.port6
-g[1] <= rectgen:rectgen.port6
-g[2] <= rectgen:rectgen.port6
-g[3] <= rectgen:rectgen.port6
-g[4] <= rectgen:rectgen.port6
-g[5] <= rectgen:rectgen.port6
-g[6] <= rectgen:rectgen.port6
-g[7] <= rectgen:rectgen.port6
+g[0] <= rectgen:rectgen_inst.port6
+g[1] <= rectgen:rectgen_inst.port6
+g[2] <= rectgen:rectgen_inst.port6
+g[3] <= rectgen:rectgen_inst.port6
+g[4] <= rectgen:rectgen_inst.port6
+g[5] <= rectgen:rectgen_inst.port6
+g[6] <= rectgen:rectgen_inst.port6
+g[7] <= rectgen:rectgen_inst.port6
 b[0] <= <GND>
 b[1] <= <GND>
 b[2] <= <GND>
@@ -133,7 +130,7 @@ b[6] <= <GND>
 b[7] <= <GND>
 
 
-|tb_vga|vga:uut|videoGen:videoGen|rectgen:rectgen
+|vga|videoGen:videoGen|rectgen:rectgen_inst
 x[0] => LessThan0.IN10
 x[0] => LessThan1.IN10
 x[1] => LessThan0.IN9

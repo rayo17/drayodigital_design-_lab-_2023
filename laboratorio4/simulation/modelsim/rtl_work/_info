@@ -1,0 +1,169 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/simulation/modelsim
+vpll
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1696623247
+!i10b 1
+!s100 >9fZUH_Fo_SFSCg9EM=433
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZ=F1GG__WA9E8bKH1YQ<h0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1696621031
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv
+!i122 4
+L0 1 21
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1696623247.000000
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/pll.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4
+Z9 tCvgOpt 0
+vrectgen
+R1
+R2
+!i10b 1
+!s100 1C[zC5ZmE3=g@T7^FD6mc2
+R3
+IHG:4F;zkCIi1A>G13Q`cZ2
+R4
+S1
+R0
+Z10 w1696620748
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv
+!i122 3
+L0 1 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv|
+!i113 1
+R7
+R8
+R9
+vtb_vga
+R1
+R2
+!i10b 1
+!s100 2hmXY2]T[0oV[_^`YAaOj3
+R3
+IP<_dhFOnPAF2Dl=@3TVSZ2
+R4
+S1
+R0
+w1696621199
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv
+!i122 6
+L0 1 45
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv|
+!i113 1
+R7
+R8
+R9
+vvga
+R1
+R2
+!i10b 1
+!s100 ;KWhh];jbOKLIG>]CGO`k0
+R3
+Ib@8n:KT5L7b<dJ93Z=GQb3
+R4
+S1
+R0
+R10
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv
+!i122 0
+L0 1 18
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv|
+!i113 1
+R7
+R8
+R9
+vvgaController
+R1
+R2
+!i10b 1
+!s100 3DMaXGlFck;1YI>mS0DEg0
+R3
+IA;GM@?DW3e`gC7Q@5d:Ie2
+R4
+S1
+R0
+w1696621607
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv
+!i122 1
+L0 1 38
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv|
+!i113 1
+R7
+R8
+R9
+nvga@controller
+vvideoGen
+R1
+R2
+!i10b 1
+!s100 ej2Zz8kUI2im<4]k=VUNb1
+R3
+I6N:1:LAMb5LgET=?c5`6U2
+R4
+S1
+R0
+w1696623220
+8C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv
+FC:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv
+!i122 2
+L0 1 12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4|C:/Users/User/Desktop/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv|
+!i113 1
+R7
+R8
+R9
+nvideo@gen
