@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "g[5]",
+					"strict" : false
+				},
+				{
 					"name" : "g[6]",
 					"strict" : false
 				},

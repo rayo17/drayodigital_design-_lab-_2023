@@ -1,5 +1,5 @@
 Analysis & Synthesis report for buscaminas
-Mon Oct  9 18:10:27 2023
+Mon Oct  9 22:40:10 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -15,13 +15,14 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: vgaController:vgaCont
- 10. Parameter Settings for Inferred Entity Instance: videoGen:videoGen|lpm_divide:Mod0
- 11. Parameter Settings for Inferred Entity Instance: videoGen:videoGen|lpm_divide:Mod1
- 12. Port Connectivity Checks: "videoGen:videoGen|rectgen:rectBG2"
- 13. Port Connectivity Checks: "videoGen:videoGen|rectgen:rectBG1"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: videoGen:videoGen
+ 11. Parameter Settings for Inferred Entity Instance: videoGen:videoGen|lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: videoGen:videoGen|lpm_divide:Mod1
+ 13. Port Connectivity Checks: "videoGen:videoGen|rectgen:rectBG2"
+ 14. Port Connectivity Checks: "videoGen:videoGen|rectgen:rectBG1"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -48,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct  9 18:10:27 2023          ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct  9 22:40:10 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; buscaminas                                     ;
 ; Top-level Entity Name           ; vga                                            ;
@@ -200,14 +201,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 133               ;
+; Estimate of Logic utilization (ALMs needed) ; 142               ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 253               ;
-;     -- 7 input functions                    ; 2                 ;
-;     -- 6 input functions                    ; 11                ;
-;     -- 5 input functions                    ; 25                ;
-;     -- 4 input functions                    ; 53                ;
-;     -- <=3 input functions                  ; 162               ;
+; Combinational ALUT usage for logic          ; 271               ;
+;     -- 7 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 12                ;
+;     -- 5 input functions                    ; 37                ;
+;     -- 4 input functions                    ; 56                ;
+;     -- <=3 input functions                  ; 166               ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 21                ;
 ;                                             ;                   ;
@@ -217,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; pll:vgapll|toggle ;
 ; Maximum fan-out                             ; 22                ;
-; Total fan-out                               ; 909               ;
-; Average fan-out                             ; 2.72              ;
+; Total fan-out                               ; 983               ;
+; Average fan-out                             ; 2.79              ;
 +---------------------------------------------+-------------------+
 
 
@@ -227,10 +228,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |vga                                      ; 253 (0)             ; 21 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |vga                                                                                                                   ; vga                 ; work         ;
+; |vga                                      ; 271 (0)             ; 21 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |vga                                                                                                                   ; vga                 ; work         ;
 ;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                                                                                                        ; pll                 ; work         ;
-;    |vgaController:vgaCont|                ; 32 (32)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                             ; vgaController       ; work         ;
-;    |videoGen:videoGen|                    ; 220 (15)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen                                                                                                 ; videoGen            ; work         ;
+;    |vgaController:vgaCont|                ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                             ; vgaController       ; work         ;
+;    |videoGen:videoGen|                    ; 239 (34)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen                                                                                                 ; videoGen            ; work         ;
 ;       |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m      ; work         ;
 ;             |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
@@ -275,6 +276,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VSYN           ; 0000000010 ; Unsigned Binary                      ;
 ; VMAX           ; 1000001101 ; Unsigned Binary                      ;
 +----------------+------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: videoGen:videoGen ;
++-------------------+-------+------------------------------------+
+; Parameter Name    ; Value ; Type                               ;
++-------------------+-------+------------------------------------+
+; cell_width        ; 60    ; Signed Integer                     ;
+; cell_height       ; 60    ; Signed Integer                     ;
+; line_thickness    ; 2     ; Signed Integer                     ;
+; cell_width_tenth  ; 6     ; Signed Integer                     ;
+; cell_height_tenth ; 6     ; Signed Integer                     ;
++-------------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -371,27 +386,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 255                         ;
+; arriav_lcell_comb     ; 275                         ;
 ;     arith             ; 138                         ;
 ;         0 data inputs ; 19                          ;
 ;         1 data inputs ; 61                          ;
 ;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 14                          ;
 ;         4 data inputs ; 37                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 115                         ;
+;     normal            ; 137                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 54                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 11                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 37                          ;
+;         6 data inputs ; 12                          ;
 ; boundary_port         ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 25.90                       ;
-; Average LUT depth     ; 18.04                       ;
+; Max LUT depth         ; 26.90                       ;
+; Average LUT depth     ; 18.63                       ;
 +-----------------------+-----------------------------+
 
 
@@ -410,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Oct  9 18:10:18 2023
+    Info: Processing started: Mon Oct  9 22:39:48 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -430,12 +443,15 @@ Info (12127): Elaborating entity "vga" for the top level hierarchy
 Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 13
 Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 15
 Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 17
-Info (12128): Elaborating entity "rectgen" for hierarchy "videoGen:videoGen|rectgen:rectBG1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 7
+Warning (10858): Verilog HDL warning at videoGen.sv(14): object board used but never assigned File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(40): truncated value with size 32 to match size of target (10) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(41): truncated value with size 32 to match size of target (10) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 41
+Info (12128): Elaborating entity "rectgen" for hierarchy "videoGen:videoGen|rectgen:rectBG1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 34
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen|Mod0" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen|Mod1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen|lpm_divide:Mod0" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
-Info (12133): Instantiated megafunction "videoGen:videoGen|lpm_divide:Mod0" with the following parameter: File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen|Mod0" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen|Mod1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen|lpm_divide:Mod0" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
+Info (12133): Instantiated megafunction "videoGen:videoGen|lpm_divide:Mod0" with the following parameter: File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -446,8 +462,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_qlh File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
     Info (12023): Found entity 1: alt_u_div_qve File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen|lpm_divide:Mod1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
-Info (12133): Instantiated megafunction "videoGen:videoGen|lpm_divide:Mod1" with the following parameter: File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 13
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen|lpm_divide:Mod1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
+Info (12133): Instantiated megafunction "videoGen:videoGen|lpm_divide:Mod1" with the following parameter: File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 111
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -461,19 +477,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "r[2]" is stuck at GND File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
     Warning (13410): Pin "r[5]" is stuck at GND File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
-    Warning (13410): Pin "g[5]" is stuck at GND File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
     Warning (13410): Pin "b[5]" is stuck at GND File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 273 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Mon Oct  9 18:10:27 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info (21061): Implemented 291 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Mon Oct  9 22:40:10 2023
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:45
 
 
