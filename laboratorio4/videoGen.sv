@@ -1,5 +1,6 @@
 module videoGen(
     input logic [9:0] x, y, 
+	 input logic derecha,
     output logic [7:0] r, g, b
 );
 
@@ -29,6 +30,12 @@ module videoGen(
 	 logic within_segment_e;
 	 logic within_segment_f;
 	 logic within_segment_g;
+	 
+	 // deco
+	 logic [2:0] numero = 3'b110;
+	 logic [6:0] segmentos;
+	 
+	 decoder deco(.num(numero), .display(segmentos));
 
     // Define a background rectangle of color (217,217,214).
     rectgen rectBG1(x, y, 10'd0, 10'd0, 10'd80, 10'd480, inrectBG1);
@@ -41,7 +48,7 @@ module videoGen(
     assign cellY = y / 61;
 	 
 	 // Coordenadas de inicio para la primera celda
-	  logic [9:0] cell_start_x = 140;
+	  logic [9:0] cell_start_x = 80;
 	  logic [9:0] cell_start_y = 0;
 	  
 	  // Estos valores representarán los porcentajes del ancho y alto de la celda como números enteros.
@@ -100,7 +107,31 @@ module videoGen(
 									 (y > cell_start_y + 5*cell_height_tenth) && 
 									 (y < cell_start_y + 5*cell_height_tenth + line_thickness);
         // Renderizar segmento 'a' si estamos dentro de sus coordenadas
-        if(within_a_segment_coordinates || within_segment_b || within_segment_c || within_segment_d || within_segment_e || within_segment_f || within_segment_g) begin
+		  if(within_a_segment_coordinates && segmentos[0]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_b && segmentos[1]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_c && segmentos[2]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_d && segmentos[3]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_e && segmentos[4]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_f && segmentos[5]) begin
+            r = 8'h00;  
+            g = 8'hFF;
+            b = 8'h00;
+        end else if(within_segment_g && segmentos[6]) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;

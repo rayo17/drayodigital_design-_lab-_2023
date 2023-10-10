@@ -104,6 +104,7 @@ y[6] => y[6].IN2
 y[7] => y[7].IN2
 y[8] => y[8].IN2
 y[9] => y[9].IN2
+derecha => ~NO_FANOUT~
 r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
 r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
 r[2] <= r.DB_MAX_OUTPUT_PORT_TYPE
@@ -128,6 +129,19 @@ b[4] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[6] <= b.DB_MAX_OUTPUT_PORT_TYPE
 b[7] <= b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|videoGen:videoGen|decoder:deco
+num[0] => Decoder0.IN2
+num[1] => Decoder0.IN1
+num[2] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga|videoGen:videoGen|rectgen:rectBG1

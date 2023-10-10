@@ -1,0 +1,29 @@
+module decoder(input logic num[2:0], output logic display[6:0]);
+
+	case (num):
+		000: begin
+			assign display = 7'b0111111 ;
+		end
+		001: begin
+			assign display = 7'b0000110;
+		end
+		010: begin
+			assign display = 7'b1011011;
+		end
+		011: begin
+			assign display = 7'b1001111;
+		end
+		100: begin
+			assign display = 7'b1100110;
+		end
+		101: begin
+			assign display = 7'b1101101;
+		end
+		110: begin
+			assign display = 7'b1111101;
+		end
+		111: begin 
+			assign display = 7'b0000111;
+		end
+
+endmodule
