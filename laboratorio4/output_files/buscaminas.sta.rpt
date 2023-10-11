@@ -1,5 +1,5 @@
 Timing Analyzer report for buscaminas
-Tue Oct 10 15:43:18 2023
+Wed Oct 11 11:15:02 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -97,16 +97,16 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.25        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.5%      ;
-;     Processor 3            ;   3.5%      ;
-;     Processor 4            ;   3.4%      ;
-;     Processor 5            ;   3.2%      ;
-;     Processor 6            ;   3.2%      ;
+;     Processor 2            ;   5.2%      ;
+;     Processor 3            ;   5.2%      ;
+;     Processor 4            ;   5.1%      ;
+;     Processor 5            ;   5.0%      ;
+;     Processor 6            ;   4.9%      ;
 +----------------------------+-------------+
 
 
@@ -125,7 +125,7 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 243.84 MHz ; 243.84 MHz      ; pll:vgapll|toggle ;      ;
+; 238.78 MHz ; 238.78 MHz      ; pll:vgapll|toggle ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -141,8 +141,8 @@ HTML report is unavailable in plain text report export.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -3.771 ; -3.771        ;
-; pll:vgapll|toggle ; -3.101 ; -69.914       ;
+; clk               ; -3.617 ; -3.617        ;
+; pll:vgapll|toggle ; -3.188 ; -70.984       ;
 +-------------------+--------+---------------+
 
 
@@ -151,8 +151,8 @@ HTML report is unavailable in plain text report export.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; pll:vgapll|toggle ; 0.671 ; 0.000         ;
-; clk               ; 1.561 ; 0.000         ;
+; pll:vgapll|toggle ; 0.670 ; 0.000         ;
+; clk               ; 1.252 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -173,8 +173,8 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk               ; -0.803 ; -1.376               ;
-; pll:vgapll|toggle ; -0.394 ; -11.948              ;
+; clk               ; -0.896 ; -1.549               ;
+; pll:vgapll|toggle ; -0.394 ; -12.106              ;
 +-------------------+--------+----------------------+
 
 
@@ -189,7 +189,7 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 241.37 MHz ; 241.37 MHz      ; pll:vgapll|toggle ;      ;
+; 238.04 MHz ; 238.04 MHz      ; pll:vgapll|toggle ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -199,8 +199,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -3.696 ; -3.696        ;
-; pll:vgapll|toggle ; -3.143 ; -70.689       ;
+; clk               ; -3.508 ; -3.508        ;
+; pll:vgapll|toggle ; -3.201 ; -71.330       ;
 +-------------------+--------+---------------+
 
 
@@ -209,8 +209,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; pll:vgapll|toggle ; 0.662 ; 0.000         ;
-; clk               ; 1.591 ; 0.000         ;
+; pll:vgapll|toggle ; 0.668 ; 0.000         ;
+; clk               ; 1.257 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -231,8 +231,8 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk               ; -0.812 ; -1.419              ;
-; pll:vgapll|toggle ; -0.394 ; -11.889             ;
+; clk               ; -0.893 ; -1.576              ;
+; pll:vgapll|toggle ; -0.394 ; -11.920             ;
 +-------------------+--------+---------------------+
 
 
@@ -247,8 +247,8 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -2.917 ; -2.917        ;
-; pll:vgapll|toggle ; -1.416 ; -30.813       ;
+; clk               ; -2.928 ; -2.928        ;
+; pll:vgapll|toggle ; -1.423 ; -31.479       ;
 +-------------------+--------+---------------+
 
 
@@ -257,8 +257,8 @@ No synchronizer chains to report.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; pll:vgapll|toggle ; 0.342 ; 0.000         ;
-; clk               ; 1.529 ; 0.000         ;
+; pll:vgapll|toggle ; 0.351 ; 0.000         ;
+; clk               ; 1.326 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -279,8 +279,8 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk               ; -0.700 ; -1.052               ;
-; pll:vgapll|toggle ; 0.134  ; 0.000                ;
+; clk               ; -0.777 ; -1.203               ;
+; pll:vgapll|toggle ; 0.104  ; 0.000                ;
 +-------------------+--------+----------------------+
 
 
@@ -295,8 +295,8 @@ No synchronizer chains to report.
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -2.529 ; -2.529        ;
-; pll:vgapll|toggle ; -1.299 ; -28.192       ;
+; clk               ; -2.530 ; -2.530        ;
+; pll:vgapll|toggle ; -1.258 ; -28.186       ;
 +-------------------+--------+---------------+
 
 
@@ -305,8 +305,8 @@ No synchronizer chains to report.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; pll:vgapll|toggle ; 0.312 ; 0.000         ;
-; clk               ; 1.287 ; 0.000         ;
+; pll:vgapll|toggle ; 0.322 ; 0.000         ;
+; clk               ; 1.102 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -327,8 +327,8 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk               ; -0.689 ; -1.038              ;
-; pll:vgapll|toggle ; 0.142  ; 0.000               ;
+; clk               ; -0.745 ; -1.149              ;
+; pll:vgapll|toggle ; 0.118  ; 0.000               ;
 +-------------------+--------+---------------------+
 
 
@@ -343,12 +343,12 @@ No synchronizer chains to report.
 +--------------------+---------+-------+----------+---------+---------------------+
 ; Clock              ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack   ; -3.771  ; 0.312 ; N/A      ; N/A     ; -0.812              ;
-;  clk               ; -3.771  ; 1.287 ; N/A      ; N/A     ; -0.812              ;
-;  pll:vgapll|toggle ; -3.143  ; 0.312 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS    ; -74.385 ; 0.0   ; 0.0      ; 0.0     ; -13.324             ;
-;  clk               ; -3.771  ; 0.000 ; N/A      ; N/A     ; -1.419              ;
-;  pll:vgapll|toggle ; -70.689 ; 0.000 ; N/A      ; N/A     ; -11.948             ;
+; Worst-case Slack   ; -3.617  ; 0.322 ; N/A      ; N/A     ; -0.896              ;
+;  clk               ; -3.617  ; 1.102 ; N/A      ; N/A     ; -0.896              ;
+;  pll:vgapll|toggle ; -3.201  ; 0.322 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS    ; -74.838 ; 0.0   ; 0.0      ; 0.0     ; -13.655             ;
+;  clk               ; -3.617  ; 0.000 ; N/A      ; N/A     ; -1.576              ;
+;  pll:vgapll|toggle ; -71.330 ; 0.000 ; N/A      ; N/A     ; -12.106             ;
 +--------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -552,7 +552,7 @@ No synchronizer chains to report.
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; pll:vgapll|toggle ; clk               ; 1        ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle ; pll:vgapll|toggle ; 2056     ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle ; pll:vgapll|toggle ; 1991     ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -563,7 +563,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; pll:vgapll|toggle ; clk               ; 1        ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle ; pll:vgapll|toggle ; 2056     ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle ; pll:vgapll|toggle ; 1991     ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -589,8 +589,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 26    ; 26   ;
-; Unconstrained Output Port Paths ; 498   ; 498  ;
+; Unconstrained Output Ports      ; 29    ; 29   ;
+; Unconstrained Output Port Paths ; 519   ; 519  ;
 +---------------------------------+-------+------+
 
 
@@ -614,6 +614,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; blank_b     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -628,8 +629,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -648,6 +651,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; blank_b     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -662,8 +666,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -678,7 +684,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 10 15:43:13 2023
+    Info: Processing started: Wed Oct 11 11:14:57 2023
 Info: Command: quartus_sta buscaminas -c buscaminas
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -696,96 +702,96 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.771
+Info (332146): Worst-case setup slack is -3.617
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.771              -3.771 clk 
-    Info (332119):    -3.101             -69.914 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.671
+    Info (332119):    -3.617              -3.617 clk 
+    Info (332119):    -3.188             -70.984 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.670
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.671               0.000 pll:vgapll|toggle 
-    Info (332119):     1.561               0.000 clk 
+    Info (332119):     0.670               0.000 pll:vgapll|toggle 
+    Info (332119):     1.252               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.803
+Info (332146): Worst-case minimum pulse width slack is -0.896
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.803              -1.376 clk 
-    Info (332119):    -0.394             -11.948 pll:vgapll|toggle 
+    Info (332119):    -0.896              -1.549 clk 
+    Info (332119):    -0.394             -12.106 pll:vgapll|toggle 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.696
+Info (332146): Worst-case setup slack is -3.508
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.696              -3.696 clk 
-    Info (332119):    -3.143             -70.689 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.662
+    Info (332119):    -3.508              -3.508 clk 
+    Info (332119):    -3.201             -71.330 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.668
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.662               0.000 pll:vgapll|toggle 
-    Info (332119):     1.591               0.000 clk 
+    Info (332119):     0.668               0.000 pll:vgapll|toggle 
+    Info (332119):     1.257               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.812
+Info (332146): Worst-case minimum pulse width slack is -0.893
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.812              -1.419 clk 
-    Info (332119):    -0.394             -11.889 pll:vgapll|toggle 
+    Info (332119):    -0.893              -1.576 clk 
+    Info (332119):    -0.394             -11.920 pll:vgapll|toggle 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.917
+Info (332146): Worst-case setup slack is -2.928
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.917              -2.917 clk 
-    Info (332119):    -1.416             -30.813 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.342
+    Info (332119):    -2.928              -2.928 clk 
+    Info (332119):    -1.423             -31.479 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.342               0.000 pll:vgapll|toggle 
-    Info (332119):     1.529               0.000 clk 
+    Info (332119):     0.351               0.000 pll:vgapll|toggle 
+    Info (332119):     1.326               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.700
+Info (332146): Worst-case minimum pulse width slack is -0.777
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.700              -1.052 clk 
-    Info (332119):     0.134               0.000 pll:vgapll|toggle 
+    Info (332119):    -0.777              -1.203 clk 
+    Info (332119):     0.104               0.000 pll:vgapll|toggle 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.529
+Info (332146): Worst-case setup slack is -2.530
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.529              -2.529 clk 
-    Info (332119):    -1.299             -28.192 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.312
+    Info (332119):    -2.530              -2.530 clk 
+    Info (332119):    -1.258             -28.186 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.312               0.000 pll:vgapll|toggle 
-    Info (332119):     1.287               0.000 clk 
+    Info (332119):     0.322               0.000 pll:vgapll|toggle 
+    Info (332119):     1.102               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.689
+Info (332146): Worst-case minimum pulse width slack is -0.745
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.689              -1.038 clk 
-    Info (332119):     0.142               0.000 pll:vgapll|toggle 
+    Info (332119):    -0.745              -1.149 clk 
+    Info (332119):     0.118               0.000 pll:vgapll|toggle 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5151 megabytes
-    Info: Processing ended: Tue Oct 10 15:43:18 2023
+    Info: Peak virtual memory: 5158 megabytes
+    Info: Processing ended: Wed Oct 11 11:15:02 2023
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 
