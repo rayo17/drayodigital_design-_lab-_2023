@@ -107,31 +107,31 @@ module videoGen(
 			// ---------------------------------------------------------------------------------
 			
         // Pinta el segmento si esta en posicion, si esta activo y si esta revelado
-		  if(within_segment_a && segmentos[0] && currentState==3'b000) begin
+		  if(x > 80 && within_segment_a && segmentos[0] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_b && segmentos[1] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_b && segmentos[1] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_c && segmentos[2] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_c && segmentos[2] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_d && segmentos[3] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_d && segmentos[3] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_e && segmentos[4] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_e && segmentos[4] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_f && segmentos[5] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_f && segmentos[5] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
-        end else if(within_segment_g && segmentos[6] && currentState==3'b000) begin
+        end else if(x > 80 && within_segment_g && segmentos[6] && currentState==3'b001 && x < 560) begin
             r = 8'h00;  
             g = 8'hFF;
             b = 8'h00;
