@@ -1,0 +1,14 @@
+module board;
+  //declaration of array’s
+  int array[7:0][7:0];        //2 dimension array
+ 
+  initial begin
+    //array initialization
+    array = '{'{0,1,2,3,4,5,6,7},'{8,9,10,11,12,13,14,15},'{16,17,18,19,20,21,22,23},'{24,25,26,27,28,29,30,31},
+	 '{32,33,34,35,36,37,38,39},'{40,41,42,43,44,45,46,47},'{48,49,50,51,52,53,54,55},'{56,57,58,59,60,61,62,63}};
+ 
+    //displaying array elements 
+    $display("-------displaying 2d array-------");
+    foreach(array[i,j]) $display("\t array[%0d][%0d] = %0d",i,j,array[i][j]);
+  end
+endmodule 
