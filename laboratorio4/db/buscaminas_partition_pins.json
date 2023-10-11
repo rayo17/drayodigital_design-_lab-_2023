@@ -32,19 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "r[2]",
-					"strict" : false
-				},
-				{
 					"name" : "r[3]",
 					"strict" : false
 				},
 				{
 					"name" : "r[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r[5]",
 					"strict" : false
 				},
 				{
@@ -76,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "g[5]",
-					"strict" : false
-				},
-				{
 					"name" : "g[6]",
 					"strict" : false
 				},
@@ -105,10 +93,6 @@
 				},
 				{
 					"name" : "b[4]",
-					"strict" : false
-				},
-				{
-					"name" : "b[5]",
 					"strict" : false
 				},
 				{
