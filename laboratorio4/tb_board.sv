@@ -1,32 +1,42 @@
 module tb_board;
-  reg clk;
-  reg reset;
-  
-  // Instancia Unit Under Test del módulo matriz
-  board uut (
+
+	logic rigth = 0;
+	logic left = 0;
+	logic up = 0;
+	logic down = 0;
+	logic selectFlag = 0;
+	logic select = 0;
+	reg clk;
+	reg rst;
+	logic [3:0] totalMines;
+	
+	
+	busca_minas busca_minas_inst (
+    .rigth(rigth),
+	 .left(left),
+	 .up(up),
+	 .down(down),
+    .selectFlag(selectFlag),
+    .select(select),
     .clk(clk),
-    .reset(reset)
-  );
-  
+    .reset(reset),
+    .totalMines(totalMines)
+);
 
-  always begin
-    #5 clk = ~clk;
-  end
+  always #5 clk = ~clk;
 
-  // Reset
   initial begin
+	totalMines = 5;
     clk = 0;
-    reset = 1; // Activar reset inicialmente
-    #10 reset = 0; // Desactivar reset
+    reset = 0; 
+     
+    // Reset
+    reset = 1;
+    #10 reset = 0;
+
     #100;
-    // Visualización de la matriz después del reset
-    $display("Matriz después del reset:");
-    for (int i = 0; i < 8; i = i + 1) begin
-      for (int j = 0; j < 8; j = j + 1) begin
-        $display("matrix[%0d][%0d] = %b", i, j, uut.matrix[i][j]);
-      end
-    end
- 
-    $finish;
+	 $display("-------------------------------------------------------------------------------");
+    totalMines=10;
   end
-endmodule
+
+endmodule 
