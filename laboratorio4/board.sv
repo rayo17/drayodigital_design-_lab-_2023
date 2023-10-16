@@ -7,8 +7,8 @@ module board (
     input logic select,
     input wire clk,
     input wire reset,
-    input logic [3:0] totalMines
-	  output reg [9:0] matrix[7:0][7:0]
+    input logic [3:0] totalMines,
+	 input reg [9:0] matrix[7:0][7:0]
 );
 
 logic [2:0] state, nextState;
@@ -21,7 +21,7 @@ reg [2:0] row;
 reg [2:0] column;
 
 
-RandomGenerator r_inst (
+bombGenerator bombGenerator_inst (
     .clk(clk),
     .reset(reset),
     .row(row),
@@ -29,7 +29,7 @@ RandomGenerator r_inst (
 );
 
 // Instantiated board
-GameBoard tab_ins (
+GameBoard GameBoard_ins (
     .clk(clk),
     .reset(reset),
     .totalMines(totalMines),
@@ -49,7 +49,7 @@ GameBoard tab_ins (
   begin
     case(state)
 			// Estado 0
-        3'b000: if (mov) nextState = 3'b111;
+        3'b000: if (movement) nextState = 3'b111;
                else if (selectFlag) nextState = 3'b110;
                else if (select) nextState = 3'b001;
                else nextState = 3'b000;

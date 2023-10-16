@@ -11,7 +11,7 @@ module tb_board;
 	logic [3:0] totalMines;
 	
 	
-	busca_minas busca_minas_inst (
+	board board_inst (
     .rigth(rigth),
 	 .left(left),
 	 .up(up),

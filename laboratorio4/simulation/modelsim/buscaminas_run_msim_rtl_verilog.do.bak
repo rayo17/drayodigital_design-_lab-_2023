@@ -6,9 +6,6 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4 {C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv}
-vlog -sv -work work +incdir+C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4 {C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv}
-vlog -sv -work work +incdir+C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4 {C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/bombGenerator.sv}
-vlog -sv -work work +incdir+C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4 {C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv}
 
 vlog -sv -work work +incdir+C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4 {C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv}
 

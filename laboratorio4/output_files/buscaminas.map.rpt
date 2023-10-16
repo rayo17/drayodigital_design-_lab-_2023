@@ -1,5 +1,5 @@
-Analysis & Elaboration report for buscaminas
-Wed Oct 11 00:08:57 2023
+Analysis & Synthesis report for buscaminas
+Mon Oct 16 17:28:17 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. State Machine - |tb_board|board:board_inst|state
+  6. Port Connectivity Checks: "board:board_inst|GameBoard:GameBoard_ins"
+  7. Port Connectivity Checks: "board:board_inst"
+  8. Elapsed Time Per Partition
+  9. Analysis & Synthesis Messages
 
 
 
@@ -34,47 +38,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Oct 11 00:08:57 2023       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; buscaminas                                  ;
-; Top-level Entity Name         ; board                                       ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Mon Oct 16 17:28:17 2023           ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; buscaminas                                  ;
+; Top-level Entity Name       ; tb_board                                    ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; board              ; buscaminas         ;
+; Top-level entity name                                                           ; tb_board           ; buscaminas         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,681 +143,121 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |tb_board|board:board_inst|state                                                          ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; state.111 ; state.110 ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; state.001 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; state.010 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; state.011 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; state.100 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; state.101 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.110 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.111 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "board:board_inst|GameBoard:GameBoard_ins" ;
++-----------+-------+----------+---------------------------------------+
+; Port      ; Type  ; Severity ; Details                               ;
++-----------+-------+----------+---------------------------------------+
+; placeMine ; Input ; Info     ; Stuck at GND                          ;
++-----------+-------+----------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "board:board_inst"                                                                                                                                    ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                      ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; rigth         ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; left          ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; up            ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; down          ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; selectFlag    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; select        ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; reset         ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; totalMines[3] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; totalMines[2] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; totalMines[1] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; totalMines[0] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; matrix        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 11 00:08:47 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas --analysis_and_elaboration
+    Info: Processing started: Mon Oct 16 17:28:06 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/vgaController.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/rectgen.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/pll.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_vga.sv
-    Info (12023): Found entity 1: tb_vga File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_vga.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/decoder.sv Line: 1
+Warning (12019): Can't analyze file -- file vga.sv is missing
+Warning (12019): Can't analyze file -- file vgaController.sv is missing
+Warning (12019): Can't analyze file -- file videoGen.sv is missing
+Warning (12019): Can't analyze file -- file rectgen.sv is missing
+Warning (12019): Can't analyze file -- file pll.sv is missing
+Warning (12019): Can't analyze file -- file tb_vga.sv is missing
+Warning (12019): Can't analyze file -- file decoder.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file board.sv
     Info (12023): Found entity 1: board File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_board.sv
     Info (12023): Found entity 1: tb_board File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 1
-Info (12127): Elaborating entity "board" for the top level hierarchy
-Info (10041): Inferred latch for "matrix[0][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[0][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[1][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[2][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[3][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[4][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[5][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[6][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][0][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][1][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][2][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][3][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][4][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][5][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][6][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][0]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][1]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][2]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][3]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][4]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][5]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][6]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][7]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][8]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
-Info (10041): Inferred latch for "matrix[7][7][9]" at board.sv(10) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file bombgenerator.sv
+    Info (12023): Found entity 1: bombGenerator File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/bombGenerator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gameboard.sv
+    Info (12023): Found entity 1: GameBoard File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at tb_board.sv(22): created implicit net for "reset" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 22
+Info (12127): Elaborating entity "tb_board" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb_board.sv(26): assignments to clk create a combinational loop File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 26
+Info (10648): Verilog HDL Display System Task info at tb_board.sv(38): ------------------------------------------------------------------------------- File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 38
+Info (12128): Elaborating entity "board" for hierarchy "board:board_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 24
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrix" into its bus
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Wed Oct 11 00:08:57 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+Info (12128): Elaborating entity "bombGenerator" for hierarchy "board:board_inst|bombGenerator:bombGenerator_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 29
+Info (12128): Elaborating entity "GameBoard" for hierarchy "board:board_inst|GameBoard:GameBoard_ins" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at GameBoard.sv(11): object "temporary" assigned a value but never read File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 11
+Info (10648): Verilog HDL Display System Task info at GameBoard.sv(31): Empty board File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 31
+Warning (10855): Verilog HDL warning at GameBoard.sv(23): initial value for variable temporary should be constant File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at GameBoard.sv(79): truncated value with size 32 to match size of target (4) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 79
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 14 warnings
+    Error: Peak virtual memory: 4780 megabytes
+    Error: Processing ended: Mon Oct 16 17:28:17 2023
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:20
 
 
