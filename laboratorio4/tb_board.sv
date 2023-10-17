@@ -1,5 +1,5 @@
 module tb_board;
-
+	logic movement = 0;
 	logic rigth = 0;
 	logic left = 0;
 	logic up = 0;
@@ -12,6 +12,7 @@ module tb_board;
 	
 	
 	board board_inst (
+	 .movement(movement),
     .rigth(rigth),
 	 .left(left),
 	 .up(up),
@@ -23,7 +24,7 @@ module tb_board;
     .totalMines(totalMines)
 );
 
-  always #5 clk = ~clk;
+  always #15 clk = ~clk;
 
   initial begin
 	totalMines = 5;
@@ -34,9 +35,67 @@ module tb_board;
     reset = 1;
     #10 reset = 0;
 
-    #100;
+    // Espera un tiempo para observar la secuencia de números aleatorios generada
+    #150;
 	 $display("-------------------------------------------------------------------------------");
-    totalMines=10;
-  end
-
+	 movement=1;
+	 #100;
+	 movement=0;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	 
+	 rigth=1;
+	 left=1;
+	 #10;
+	 rigth=0;
+	 left=0;
+	 #10;
+	end
 endmodule 

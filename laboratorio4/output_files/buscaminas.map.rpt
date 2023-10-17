@@ -1,5 +1,5 @@
 Analysis & Synthesis report for buscaminas
-Mon Oct 16 17:28:17 2023
+Tue Oct 17 00:34:40 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Oct 16 17:28:17 2023           ;
+; Analysis & Synthesis Status ; Failed - Tue Oct 17 00:34:40 2023           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; buscaminas                                  ;
 ; Top-level Entity Name       ; tb_board                                    ;
@@ -176,33 +176,35 @@ Encoding Type:  One-Hot
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
 
 
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "board:board_inst|GameBoard:GameBoard_ins" ;
-+-----------+-------+----------+---------------------------------------+
-; Port      ; Type  ; Severity ; Details                               ;
-+-----------+-------+----------+---------------------------------------+
-; placeMine ; Input ; Info     ; Stuck at GND                          ;
-+-----------+-------+----------+---------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "board:board_inst|GameBoard:GameBoard_ins"                                                        ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; gameBoardMine     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; gameBoardRevealed ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; gameBoardAdjacent ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "board:board_inst"                                                                                                                                    ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type  ; Severity ; Details                                                                                                                                      ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rigth         ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; left          ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; up            ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; down          ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; selectFlag    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; select        ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; reset         ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; totalMines[3] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; totalMines[2] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; totalMines[1] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
-; totalMines[0] ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
-; matrix        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "board:board_inst"    ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; movement      ; Input ; Info     ; Stuck at GND ;
+; rigth         ; Input ; Info     ; Stuck at GND ;
+; left          ; Input ; Info     ; Stuck at GND ;
+; up            ; Input ; Info     ; Stuck at GND ;
+; down          ; Input ; Info     ; Stuck at GND ;
+; selectFlag    ; Input ; Info     ; Stuck at GND ;
+; select        ; Input ; Info     ; Stuck at GND ;
+; reset         ; Input ; Info     ; Stuck at GND ;
+; totalMines[3] ; Input ; Info     ; Stuck at GND ;
+; totalMines[2] ; Input ; Info     ; Stuck at VCC ;
+; totalMines[1] ; Input ; Info     ; Stuck at GND ;
+; totalMines[0] ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -220,7 +222,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 16 17:28:06 2023
+    Info: Processing started: Tue Oct 17 00:34:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -239,25 +241,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file bombgen
     Info (12023): Found entity 1: bombGenerator File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/bombGenerator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file gameboard.sv
     Info (12023): Found entity 1: GameBoard File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tb_board.sv(22): created implicit net for "reset" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at tb_board.sv(23): created implicit net for "reset" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 23
 Info (12127): Elaborating entity "tb_board" for the top level hierarchy
-Warning (10755): Verilog HDL warning at tb_board.sv(26): assignments to clk create a combinational loop File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 26
-Info (10648): Verilog HDL Display System Task info at tb_board.sv(38): ------------------------------------------------------------------------------- File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 38
-Info (12128): Elaborating entity "board" for hierarchy "board:board_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 24
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrix" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrix" into its bus
-Info (12128): Elaborating entity "bombGenerator" for hierarchy "board:board_inst|bombGenerator:bombGenerator_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 29
-Info (12128): Elaborating entity "GameBoard" for hierarchy "board:board_inst|GameBoard:GameBoard_ins" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 39
-Warning (10036): Verilog HDL or VHDL warning at GameBoard.sv(11): object "temporary" assigned a value but never read File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 11
-Info (10648): Verilog HDL Display System Task info at GameBoard.sv(31): Empty board File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 31
-Warning (10855): Verilog HDL warning at GameBoard.sv(23): initial value for variable temporary should be constant File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at GameBoard.sv(79): truncated value with size 32 to match size of target (4) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 79
+Warning (10755): Verilog HDL warning at tb_board.sv(27): assignments to clk create a combinational loop File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 27
+Info (10648): Verilog HDL Display System Task info at tb_board.sv(40): ------------------------------------------------------------------------------- File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 40
+Info (12128): Elaborating entity "board" for hierarchy "board:board_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/tb_board.sv Line: 25
+Warning (10036): Verilog HDL or VHDL warning at board.sv(24): object "gameBoardMine" assigned a value but never read File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at board.sv(25): object "gameBoardRevealed" assigned a value but never read File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 25
+Warning (10036): Verilog HDL or VHDL warning at board.sv(26): object "gameBoardAdjacent" assigned a value but never read File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 26
+Warning (10235): Verilog HDL Always Construct warning at board.sv(97): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 97
+Warning (10235): Verilog HDL Always Construct warning at board.sv(101): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 101
+Warning (10235): Verilog HDL Always Construct warning at board.sv(106): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 106
+Warning (10235): Verilog HDL Always Construct warning at board.sv(110): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 110
+Warning (10240): Verilog HDL Always Construct warning at board.sv(94): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 94
+Warning (10240): Verilog HDL Always Construct warning at board.sv(94): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 94
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gameBoardAdjacent" into its bus
+Info (12128): Elaborating entity "bombGenerator" for hierarchy "board:board_inst|bombGenerator:bombGenerator_inst" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 33
+Info (12128): Elaborating entity "GameBoard" for hierarchy "board:board_inst|GameBoard:GameBoard_ins" File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/board.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at GameBoard.sv(20): truncated value with size 4 to match size of target (1) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 20
+Info (10648): Verilog HDL Display System Task info at GameBoard.sv(21): It changed: File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 21
+Info (10648): Verilog HDL Display System Task info at GameBoard.sv(22): 1'b. File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 22
+Info (10648): Verilog HDL Display System Task info at GameBoard.sv(30): Empty board File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 30
+Warning (10855): Verilog HDL warning at GameBoard.sv(19): initial value for variable previousTotalMines should be constant File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at GameBoard.sv(40): truncated value with size 4 to match size of target (1) File: C:/Users/pepev/OneDrive/Documentos/GitHub/drayodigital_design-_lab-_2023/laboratorio4/GameBoard.sv Line: 40
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gameBoardAdjacent" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gameBoardAdjacent" into its bus
 Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 14 warnings
-    Error: Peak virtual memory: 4780 megabytes
-    Error: Processing ended: Mon Oct 16 17:28:17 2023
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 22 warnings
+    Error: Peak virtual memory: 4783 megabytes
+    Error: Processing ended: Tue Oct 17 00:34:40 2023
     Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:20
+    Error: Total CPU time (on all processors): 00:00:22
 
 

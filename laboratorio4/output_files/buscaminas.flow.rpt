@@ -1,5 +1,5 @@
 Flow report for buscaminas
-Mon Oct 16 17:28:17 2023
+Tue Oct 17 00:34:40 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Mon Oct 16 17:28:17 2023      ;
+; Flow Status                 ; Flow Failed - Tue Oct 17 00:34:40 2023      ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; buscaminas                                  ;
 ; Top-level Entity Name       ; tb_board                                    ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2023 17:28:06 ;
+; Start date & time ; 10/17/2023 00:34:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; buscaminas          ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 30902509384334.169749888614132         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 30902509384334.169752446921640         ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_vga                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_board                          ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
@@ -109,8 +109,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4780 MB             ; 00:00:20                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4783 MB             ; 00:00:21                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

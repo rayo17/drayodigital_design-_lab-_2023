@@ -2,92 +2,99 @@ module GameBoard(
 	input wire clk,       
    input wire reset,      
 	input logic [3:0] totalMines,
-	input logic placeMine,
 	input reg [2:0] row, 
-	input reg [2:0] column
+	input reg [2:0] column,
+	output logic gameBoardMine[8][8],
+	output logic gameBoardRevealed[8][8],
+	output int gameBoardAdjacent[8][8]
 );
 	 
 	int counter = 0;
-	int temporary = 0;
+	//int temporary = 0;
 	logic calculateAdjacent = 0;
 	 
-	typedef struct {
-		bit mine;   
-		bit revealed;
-		bit[3:0] adjacent;
-	} cell_t;
-	
-
-	cell_t gameBoard[8][8];
+	reg totalMinesChanged = 0;
+	reg previousTotalMines = 0;
 	
 	initial begin
+		previousTotalMines = totalMines;
+		$display("It changed:");
+		$display(previousTotalMines);
 		for (int i = 0; i < 8; i++) begin
 			for (int j = 0; j < 8; j++) begin
-				gameBoard[i][j].mine = 0; 
-				gameBoard[i][j].revealed = 0;
-				gameBoard[i][j].adjacent = 0;
+				gameBoardMine[i][j] = 0; 
+				gameBoardRevealed[i][j] = 0;
+				gameBoardAdjacent[i][j] = 0;
 			end
 		end
 		$display("Empty board");
-		temporary = totalMines;
 	end
 	 
-	 always @(totalMines)begin
-		for (int i = 0; i < 8; i++) begin
-			for (int j = 0; j < 8; j++) begin
-				gameBoard[i][j].mine = 0; 
-				gameBoard[i][j].revealed = 0;
-				gameBoard[i][j].adjacent = 0;
-			end
-		end
-		$display("Empty board");
-		
-		$display("Total mines have changed");
-		counter = 0;
-		calculateAdjacent = 0;
-	 end
-	 
+ 
 	 always @(posedge clk) begin
+		//verficar si totalmines ha cambiado
+		
+		if (totalMines != previousTotalMines && previousTotalMines >= 0 && totalMines >= 0) begin
+			$display("Mines have changed");
+			totalMinesChanged = 1;
+			previousTotalMines = totalMines;
+		end
+	
+	
+		//colocar las minas
 		if(counter < totalMines) begin
-			if (!gameBoard[row][column].mine && row >= 0) begin
-				gameBoard[row][column].mine = 1;
-				$display("mina colocada en fila: %0d columna: %0d",row, column);
+			if (!gameBoardMine[row][column] && row >= 0) begin
+				gameBoardMine[row][column] = 1;
+				$display("Mine colocated in row: %0d column: %0d",row, column);
 				counter = counter +1;
 			end
 		end
-		
+		//calcular ads
 		if(counter == (totalMines) && ~calculateAdjacent)begin
-			$display("calculated");
+			$display("Calculating");
 			calculateAdjacent = 1;		
 		end
-	 end
-
-	
-	always @( posedge calculateAdjacent) begin
-	$display("calculando adyacencias");
-		for (int i = 0; i < 8; i++) begin
-			for (int j = 0; j < 8; j++) begin
-				if (!gameBoard[i][j].mine) begin
-					automatic int adjacent_mines = 0;
-					for (int x = -1; x <= 1; x++) begin
-						for (int y = -1; y <= 1; y++) begin
-							if (i + x >= 0 && i + x < 8 && j + y >= 0 && j + y < 8) begin
-								adjacent_mines += gameBoard[i + x][j + y].mine;
-							end
-						end
-					end
-					gameBoard[i][j].adjacent = adjacent_mines;
+		
+		//cuando hay cambio de minas para recalcular el tablero
+		if(totalMinesChanged) begin
+			for (int i = 0; i < 8; i++) begin
+				for (int j = 0; j < 8; j++) begin
+					gameBoardMine[i][j] = 0; 
+					gameBoardRevealed[i][j] = 0;
+					gameBoardAdjacent[i][j] = 0;
 				end
 			end
+			$display("Empty Board");
+			$display("Total mines have changed");
+			counter = 0;
+			calculateAdjacent = 0;
+			totalMinesChanged = 0;
 		end
-		// Matrix printed
-		for (int row = 0; row < 8; row = row + 1) begin
-			for (int col = 0; col < 8; col = col + 1) begin
-                    $display("matrix[%0d][%0d]", row, col);
-						  $display(gameBoard[row][col].adjacent);
+		
+		//calculo de adyacentes
+		
+		if(calculateAdjacent) begin
+			$display("Calculating adjacencies");
+			for (int i = 0; i < 8; i++) begin
+				for (int j = 0; j < 8; j++) begin
+					if (!gameBoardMine[i][j]) begin
+						automatic int adjacentMines = 0;
+						for (int x = -1; x <= 1; x++) begin
+							for (int y = -1; y <= 1; y++) begin
+								if (i + x >= 0 && i + x < 8 && j + y >= 0 && j + y < 8) begin
+									adjacentMines += gameBoardMine[i + x][j + y];
+								end
+							end
+						end
+						gameBoardAdjacent[i][j] = adjacentMines;
+					end
+				end
 			end
-		end
-	$display("Bombs close");
-	end
+			
+			$display("adyacencias calculadas");
+			calculateAdjacent = 0;
+			counter = counter + 1;
+			end
+	 end
 
-endmodule
+endmodule 

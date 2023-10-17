@@ -1,4 +1,5 @@
 module board (
+	 input logic movement,
     input logic rigth,
     input logic left,
     input logic up,
@@ -7,19 +8,22 @@ module board (
     input logic select,
     input wire clk,
     input wire reset,
-    input logic [3:0] totalMines,
-	 input reg [9:0] matrix[7:0][7:0]
+    input logic [3:0] totalMines
 );
+
+int x = 0;
+int y = 0;
 
 logic [2:0] state, nextState;
 logic bomb = 0;
 logic win = 0;
-logic movement = 0;
-logic placeMine = 0;
 
 reg [2:0] row;
 reg [2:0] column;
 
+	logic gameBoardMine[8][8];
+	logic gameBoardRevealed[8][8];
+	int gameBoardAdjacent[8][8];
 
 bombGenerator bombGenerator_inst (
     .clk(clk),
@@ -33,9 +37,11 @@ GameBoard GameBoard_ins (
     .clk(clk),
     .reset(reset),
     .totalMines(totalMines),
-    .placeMine(placeMine),
     .row(row),
-    .column(column)
+    .column(column),
+			.gameBoardMine(gameBoardMine),
+			.gameBoardRevealed(gameBoardRevealed),
+			.gameBoardAdjacent(gameBoardAdjacent)
 );
   	
 
@@ -84,11 +90,27 @@ GameBoard GameBoard_ins (
     endcase
 	
   end
-  
-  always @(nextState) begin
-
-  
+   
+  always @(rigth or left)begin
+  $display("Movimiento"); 
+	if(rigth)begin
+		if(x == 7)begin
+			x = 0;
+			$display("posicion en x es: %0d", x);
+		end else begin
+			x = x + 1;
+			$display("posicion en x es: %0d", x);
+		end
+	end
+	if(left)begin
+		if(y == 7)begin
+			y = 0;
+			$display("posicion en y es: %0d", y);
+		end else begin
+			y = y + 1;
+			$display("posicion en y es: %0d", y);
+		end
+	
+	end
   end
-  
-
 endmodule 
