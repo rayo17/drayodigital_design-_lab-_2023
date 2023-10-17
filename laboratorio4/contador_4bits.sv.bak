@@ -1,0 +1,21 @@
+module contador_4bits (
+    input logic clk,       // Señal de reloj
+    input logic reset,     // Señal de reset
+    input logic enable,    // Señal para habilitar el incremento
+    output logic [3:0] count // Salida de 4 bits del contador
+);
+
+// Registro interno para almacenar el valor del contador
+logic [3:0] count_reg = 4'b0000;
+
+always_ff @(posedge clk or posedge reset) begin
+    if (reset) 
+        count_reg <= 4'b0000; // Reset del contador
+    else if (enable)
+        count_reg <= count_reg + 4'b0001; // Incrementa el contador si está habilitado
+end
+
+// Asigna el valor del registro al puerto de salida
+assign count = count_reg;
+
+endmodule

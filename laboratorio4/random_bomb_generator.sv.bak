@@ -1,0 +1,36 @@
+module random_bomb_generator(
+    input logic clk,
+    input logic reset,
+    input logic start,          // Inicia la generación de bombas
+    input [3:0] cantBombas,     // Cuántas bombas generar
+    output logic done,          // Señaliza cuando se han generado todas las bombas
+    output [2:0] random_x,      // Coordenada x aleatoria generada
+    output [2:0] random_y       // Coordenada y aleatoria generada
+);
+
+    // Parámetros LCG (estos son valores comunes, pero pueden ser ajustados)
+    parameter int A = 1664525;
+    parameter int C = 1013904223;
+    parameter int M = 2**32;
+
+    reg [31:0] seed = 32'hDEADBEEF;  // Semilla
+    reg [3:0] bomb_count = 4'b0;
+
+    always_ff @(posedge clk or negedge reset) begin
+        if (!reset) begin
+            seed <= 32'hDEADBEEF;
+            bomb_count <= 4'b0;
+            done <= 0;
+        end else if (start && bomb_count < cantBombas) begin
+            seed <= (A * seed + C) % M;
+            bomb_count <= bomb_count + 1;
+        end else if (bomb_count == cantBombas) begin
+            done <= 1;
+        end
+    end
+
+    // Las coordenadas se derivan de los bits menos significativos del LCG.
+    assign random_x = seed[2:0];
+    assign random_y = seed[5:3];
+
+endmodule

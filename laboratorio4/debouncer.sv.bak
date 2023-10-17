@@ -1,0 +1,25 @@
+module debouncer (
+    input logic clk,
+    input logic raw_btn,   // Señal del botón sin debouncer
+    output logic btn_out   // Señal del botón con debouncer
+);
+
+    logic [3:0] counter = 4'b0000;
+    logic btn_state = 0;
+    logic btn_prev_state = 0;
+
+    always_ff @(posedge clk) begin
+        btn_prev_state <= btn_state;
+        btn_state <= raw_btn;
+        
+        if (btn_state != btn_prev_state) begin
+            counter <= counter + 4'b0001;
+        end else begin
+            counter <= 4'b0000;
+        end
+    end
+
+    // Suponiendo que el rebote se resuelve en 16 ciclos de reloj
+    assign btn_out = (counter >= 4'b1000) ? btn_state : btn_prev_state;
+
+endmodule

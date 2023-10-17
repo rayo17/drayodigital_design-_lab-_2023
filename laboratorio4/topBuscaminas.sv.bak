@@ -1,0 +1,22 @@
+module topBuscaminas(
+			  inpot logic [3:0] cantBombas,
+			  input logic derechaBtn,
+			  input logic izquierdaBtn,
+			  input logic marcarBtn,
+			  input logic seleccionarBtn,
+			  input logic clk, // ----------------------- para la vga
+			  output logic vgaclk, // 25.175 MHz VGA clock
+			  output logic hsync, vsync,
+			  output logic sync_b, blank_b, // To monitor & DAC
+			  output logic [7:0] r, g, b, // To video DAC --------------
+			  output logic [6:0] cantBomDisplay,
+			  output logic [6:0] posiblesDisplay);
+			  
+	vga controladorVGA(clk, vgaclk, hsync, vsync, sync_b, blank_b, r, g, b);
+	
+	decoder_4bit_7seg bombDis(cantBombas, cantBomDisplay);
+	
+	logic [3:0] numBombasMarcadas = 4b'0011;
+	decoder_4bit_7seg bombDis(numBombasMarcadas, posiblesDisplay);
+	
+endmodule

@@ -120,7 +120,99 @@
 					"strict" : false
 				},
 				{
+					"name" : "cantBomDisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBomDisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[3]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[4]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[5]",
+					"strict" : false
+				},
+				{
+					"name" : "posiblesDisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBombas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBombas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBombas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cantBombas[3]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "marcarBtn_raw",
+					"strict" : false
+				},
+				{
+					"name" : "derechaBtn_raw",
+					"strict" : false
+				},
+				{
+					"name" : "izquierdaBtn_raw",
+					"strict" : false
+				},
+				{
+					"name" : "seleccionarBtn_raw",
 					"strict" : false
 				}
 			]

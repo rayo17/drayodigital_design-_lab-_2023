@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at test_matrix.sv(28): always construct contains both blocking and non-blocking assignments File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 28
+Info (10281): Verilog HDL Declaration information at debouncer.sv(14): object "COUNTER_MAX" differs only in case from object "counter_max" in the same scope File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/debouncer.sv Line: 14

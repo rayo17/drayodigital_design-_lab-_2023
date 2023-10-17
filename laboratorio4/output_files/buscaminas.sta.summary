@@ -3,99 +3,291 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -3.313
-TNS   : -3.313
+Slack : -6.778
+TNS   : -1364.719
 
-Type  : Slow 1100mV 85C Model Setup 'pll:vgapll|toggle'
-Slack : -2.870
-TNS   : -62.707
+Type  : Slow 1100mV 85C Model Setup 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : -3.792
+TNS   : -86.748
 
-Type  : Slow 1100mV 85C Model Hold 'pll:vgapll|toggle'
-Slack : 0.657
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'seleccionarBtn_raw'
+Slack : -1.503
+TNS   : -15.387
+
+Type  : Slow 1100mV 85C Model Setup 'marcarBtn_raw'
+Slack : -0.763
+TNS   : -2.884
+
+Type  : Slow 1100mV 85C Model Setup 'izquierdaBtn_raw'
+Slack : -0.228
+TNS   : -0.923
+
+Type  : Slow 1100mV 85C Model Setup 'derechaBtn_raw'
+Slack : -0.184
+TNS   : -0.990
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 1.440
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'izquierdaBtn_raw'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'derechaBtn_raw'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'marcarBtn_raw'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'seleccionarBtn_raw'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.676
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.776
-TNS   : -1.309
+Slack : -0.881
+TNS   : -173.633
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll:vgapll|toggle'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:controladorVGA|pll:vgapll|toggle'
 Slack : -0.394
-TNS   : -11.947
+TNS   : -13.203
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'seleccionarBtn_raw'
+Slack : -0.394
+TNS   : -8.369
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'marcarBtn_raw'
+Slack : -0.394
+TNS   : -4.052
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'izquierdaBtn_raw'
+Slack : -0.394
+TNS   : -3.177
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'derechaBtn_raw'
+Slack : -0.394
+TNS   : -3.120
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -3.208
-TNS   : -3.208
+Slack : -6.625
+TNS   : -1332.061
 
-Type  : Slow 1100mV 0C Model Setup 'pll:vgapll|toggle'
-Slack : -2.895
-TNS   : -63.425
+Type  : Slow 1100mV 0C Model Setup 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : -3.722
+TNS   : -85.369
 
-Type  : Slow 1100mV 0C Model Hold 'pll:vgapll|toggle'
-Slack : 0.654
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'seleccionarBtn_raw'
+Slack : -1.584
+TNS   : -16.261
+
+Type  : Slow 1100mV 0C Model Setup 'marcarBtn_raw'
+Slack : -0.787
+TNS   : -3.020
+
+Type  : Slow 1100mV 0C Model Setup 'izquierdaBtn_raw'
+Slack : -0.278
+TNS   : -1.184
+
+Type  : Slow 1100mV 0C Model Setup 'derechaBtn_raw'
+Slack : -0.224
+TNS   : -1.091
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 1.421
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'derechaBtn_raw'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'izquierdaBtn_raw'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'marcarBtn_raw'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'seleccionarBtn_raw'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.667
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.783
-TNS   : -1.356
+Slack : -0.874
+TNS   : -191.106
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll:vgapll|toggle'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:controladorVGA|pll:vgapll|toggle'
 Slack : -0.394
-TNS   : -11.769
+TNS   : -12.906
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'seleccionarBtn_raw'
+Slack : -0.394
+TNS   : -7.583
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'marcarBtn_raw'
+Slack : -0.394
+TNS   : -3.796
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'izquierdaBtn_raw'
+Slack : -0.394
+TNS   : -3.554
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'derechaBtn_raw'
+Slack : -0.394
+TNS   : -3.492
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -2.641
-TNS   : -2.641
+Slack : -3.505
+TNS   : -672.556
 
-Type  : Fast 1100mV 85C Model Setup 'pll:vgapll|toggle'
-Slack : -1.281
-TNS   : -27.379
+Type  : Fast 1100mV 85C Model Setup 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : -1.889
+TNS   : -40.524
 
-Type  : Fast 1100mV 85C Model Hold 'pll:vgapll|toggle'
-Slack : 0.342
+Type  : Fast 1100mV 85C Model Setup 'seleccionarBtn_raw'
+Slack : -0.374
+TNS   : -3.463
+
+Type  : Fast 1100mV 85C Model Setup 'marcarBtn_raw'
+Slack : -0.016
+TNS   : -0.031
+
+Type  : Fast 1100mV 85C Model Setup 'derechaBtn_raw'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'izquierdaBtn_raw'
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 1.448
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'marcarBtn_raw'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'derechaBtn_raw'
+Slack : 0.198
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'izquierdaBtn_raw'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'seleccionarBtn_raw'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.676
-TNS   : -1.001
+Slack : -0.765
+TNS   : -28.191
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll:vgapll|toggle'
-Slack : 0.063
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'seleccionarBtn_raw'
+Slack : -0.340
+TNS   : -4.267
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'marcarBtn_raw'
+Slack : -0.331
+TNS   : -2.175
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'derechaBtn_raw'
+Slack : -0.074
+TNS   : -0.438
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'izquierdaBtn_raw'
+Slack : -0.049
+TNS   : -0.289
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.088
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.275
-TNS   : -2.275
+Slack : -3.176
+TNS   : -622.099
 
-Type  : Fast 1100mV 0C Model Setup 'pll:vgapll|toggle'
-Slack : -1.171
-TNS   : -25.129
+Type  : Fast 1100mV 0C Model Setup 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : -1.682
+TNS   : -36.339
 
-Type  : Fast 1100mV 0C Model Hold 'pll:vgapll|toggle'
-Slack : 0.314
+Type  : Fast 1100mV 0C Model Setup 'seleccionarBtn_raw'
+Slack : -0.317
+TNS   : -2.801
+
+Type  : Fast 1100mV 0C Model Setup 'marcarBtn_raw'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'derechaBtn_raw'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'izquierdaBtn_raw'
+Slack : 0.328
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 1.172
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'marcarBtn_raw'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'izquierdaBtn_raw'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'derechaBtn_raw'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'seleccionarBtn_raw'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.318
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.668
-TNS   : -0.995
+Slack : -0.731
+TNS   : -28.925
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll:vgapll|toggle'
-Slack : 0.087
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'seleccionarBtn_raw'
+Slack : -0.318
+TNS   : -3.989
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'marcarBtn_raw'
+Slack : -0.316
+TNS   : -2.074
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'derechaBtn_raw'
+Slack : -0.080
+TNS   : -0.474
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'izquierdaBtn_raw'
+Slack : -0.054
+TNS   : -0.321
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:controladorVGA|pll:vgapll|toggle'
+Slack : 0.117
 TNS   : 0.000
 
 ------------------------------------------------------------
