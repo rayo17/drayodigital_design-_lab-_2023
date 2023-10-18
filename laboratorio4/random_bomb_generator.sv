@@ -1,34 +1,31 @@
 module random_bomb_generator(
-  input wire clk,     // Clock
-  input wire reset,   // Reset
-  output reg [2:0] row, 
-  output reg [2:0] column 
+    input wire clk,
+    input wire reset,
+    output reg [2:0] row,
+    output reg [2:0] column
 );
 
-  reg [15:0] lfsr_row; // LFSR = linear feedback shift register
-  reg [15:0] lfsr_column;
-  reg [15:0] internal_counter = 0;
-  logic generate_coord; // Señal de generación
+// Configuración básica de un pequeño MT (Mersenne Twister)
+reg [15:0] mt[3:0];  // Usaremos solo 4 registros para simplicidad
+integer i = 0;
+reg [15:0] y;
 
-  always @(posedge clk or posedge reset) begin
-    if (reset) 
-        internal_counter <= 0;
-    else if (generate_coord)
-        internal_counter <= internal_counter + 1;
-  end
-
-  assign generate_coord = (internal_counter == 16383); // Genera coordenadas cada 16384 ciclos
-
-  always @(posedge clk or posedge reset) begin
+always @(posedge clk or posedge reset) begin
     if (reset) begin
-      lfsr_row = 16'h0001; 
-      lfsr_column = 16'h001C; // Valores iniciales
-    end else if (generate_coord) begin // Modifica la generación de coordenadas para que sólo ocurra cuando generate_coord es alto
-      lfsr_row = {lfsr_row[0] ^ lfsr_row[2], lfsr_row[15:1]}; 
-      lfsr_column = {lfsr_column[0] ^ lfsr_column[3], lfsr_column[15:1]}; 
-      row = lfsr_row[2:0];
-      column = lfsr_column[2:0];
+        mt[0] <= 16'h1234;  // Algunos valores iniciales
+        mt[1] <= 16'h5678;
+        mt[2] <= 16'h9ABC;
+        mt[3] <= 16'hDEF0;
+    end else begin
+        y = mt[3];
+        mt[3] = mt[2];
+        mt[2] = mt[1];
+        mt[1] = mt[0];
+        mt[0] = y ^ ((y << 15) & 16'hA5A5) ^ (mt[0] >> 1) ^ mt[3];
+
+        row = mt[0][2:0];
+        column = mt[0][5:3];
     end
-  end
+end
 
 endmodule

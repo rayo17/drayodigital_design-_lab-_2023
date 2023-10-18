@@ -23,25 +23,6 @@ module topBuscaminas(
 	// Tablero
 	logic [6:0] board[7:0][7:0];
 
-  // Instanciación del generador de coordenadas aleatorias
-    random_bomb_generator rand_gen (
-        .clk(clk),
-        .reset(combined_reset),
-        .row(random_x),
-        .column(random_y)
-    );
-	 
-	    always @(posedge clk or posedge reset) begin
-        if (reset) 
-            bomb_count <= 4'b0;
-        else if (bomb_count < cantBombas) 
-            bomb_count <= bomb_count + 1;
-    end
-
-    // Ahora vamos a controlar el generador de coordenadas:
-    // Si bomb_count es igual a cantBombas, entonces queremos detener la generación de coordenadas.
-    assign combined_reset = (bomb_count == cantBombas) ? 1'b1 : reset;
-
 	// Contador para eje x
 	reg [3:0] selectedxcounter;
 
@@ -97,6 +78,7 @@ module topBuscaminas(
 		 .selected_y(selectedycounter),
 		 .celdaMarcada(counter0),
 		 .abrirCelda(opencounter),
+		 .num_of_bombs(cantBombas),
 	    .board(board)
 	);
 	

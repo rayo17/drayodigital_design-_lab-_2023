@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Oct 17 16:31:08 2023
+Fitter Status : Successful - Tue Oct 17 22:00:29 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : buscaminas
 Top-level Entity Name : topBuscaminas
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 600 / 32,070 ( 2 % )
-Total registers : 387
+Logic utilization (in ALMs) : 716 / 32,070 ( 2 % )
+Total registers : 554
 Total pins : 53 / 457 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

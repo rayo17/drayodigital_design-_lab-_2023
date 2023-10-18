@@ -1,5 +1,5 @@
 Analysis & Synthesis report for buscaminas
-Tue Oct 17 16:28:24 2023
+Tue Oct 17 21:58:14 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -16,21 +16,22 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   8. Analysis & Synthesis DSP Block Usage Summary
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: vga:controladorVGA|vgaController:vgaCont
- 13. Parameter Settings for User Entity Instance: vga:controladorVGA|videoGen:videoGen
- 14. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1
- 15. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0
- 16. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1
- 18. Port Connectivity Checks: "vga:controladorVGA|videoGen:videoGen|rectgen:rectBG2"
- 19. Port Connectivity Checks: "vga:controladorVGA|videoGen:videoGen|rectgen:rectBG1"
- 20. Port Connectivity Checks: "test_matrix:my_board"
- 21. Port Connectivity Checks: "random_bomb_generator:rand_gen"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: vga:controladorVGA|vgaController:vgaCont
+ 14. Parameter Settings for User Entity Instance: vga:controladorVGA|videoGen:videoGen
+ 15. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1
+ 16. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0
+ 17. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1
+ 19. Port Connectivity Checks: "vga:controladorVGA|videoGen:videoGen|rectgen:rectBG2"
+ 20. Port Connectivity Checks: "vga:controladorVGA|videoGen:videoGen|rectgen:rectBG1"
+ 21. Port Connectivity Checks: "test_matrix:my_board|random_bomb_generator:bomb_gen"
+ 22. Port Connectivity Checks: "test_matrix:my_board"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -57,13 +58,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 16:28:24 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 17 21:58:14 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; buscaminas                                     ;
 ; Top-level Entity Name           ; topBuscaminas                                  ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 369                                            ;
+; Total registers                 ; 534                                            ;
 ; Total pins                      ; 53                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -200,6 +201,7 @@ https://fpgasoftware.intel.com/eula.
 ; decoder_4bit_7seg.sv             ; yes             ; User SystemVerilog HDL File  ; D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/decoder_4bit_7seg.sv       ;         ;
 ; topBuscaminas.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv           ;         ;
 ; random_bomb_generator.sv         ; yes             ; User SystemVerilog HDL File  ; D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/random_bomb_generator.sv   ;         ;
+; minesBoard.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/minesBoard.sv              ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartuss/quartus/libraries/megafunctions/lpm_divide.tdf                        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartuss/quartus/libraries/megafunctions/abs_divider.inc                       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartuss/quartus/libraries/megafunctions/sign_div_unsign.inc                   ;         ;
@@ -215,65 +217,67 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 686         ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 1075        ;
-;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 293         ;
-;     -- 5 input functions                    ; 230         ;
-;     -- 4 input functions                    ; 133         ;
-;     -- <=3 input functions                  ; 418         ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 369         ;
-;                                             ;             ;
-; I/O pins                                    ; 53          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 2           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 348         ;
-; Total fan-out                               ; 5591        ;
-; Average fan-out                             ; 3.60        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 775       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1266      ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 277       ;
+;     -- 5 input functions                    ; 232       ;
+;     -- 4 input functions                    ; 134       ;
+;     -- <=3 input functions                  ; 622       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 534       ;
+;                                             ;           ;
+; I/O pins                                    ; 53        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 2         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 497       ;
+; Total fan-out                               ; 6352      ;
+; Average fan-out                             ; 3.33      ;
++---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name         ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |topBuscaminas                               ; 1075 (19)           ; 369 (17)                  ; 0                 ; 2          ; 53   ; 0            ; |topBuscaminas                                                                                                                                      ; topBuscaminas       ; work         ;
-;    |decoder_4bit_7seg:bombDis|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|decoder_4bit_7seg:bombDis                                                                                                            ; decoder_4bit_7seg   ; work         ;
-;    |decoder_4bit_7seg:posiblesDis|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|decoder_4bit_7seg:posiblesDis                                                                                                        ; decoder_4bit_7seg   ; work         ;
-;    |test_matrix:my_board|                    ; 333 (333)           ; 331 (331)                 ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|test_matrix:my_board                                                                                                                 ; test_matrix         ; work         ;
-;    |vga:controladorVGA|                      ; 709 (0)             ; 21 (0)                    ; 0                 ; 2          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA                                                                                                                   ; vga                 ; work         ;
-;       |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|pll:vgapll                                                                                                        ; pll                 ; work         ;
-;       |vgaController:vgaCont|                ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|vgaController:vgaCont                                                                                             ; vgaController       ; work         ;
-;       |videoGen:videoGen|                    ; 677 (267)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen                                                                                                 ; videoGen            ; work         ;
-;          |lpm_divide:Div0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_kbm:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated                                                   ; lpm_divide_kbm      ; work         ;
-;                |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                   |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve       ; work         ;
-;          |lpm_divide:Div1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_gbm:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;          |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m      ; work         ;
-;                |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                   |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve       ; work         ;
-;          |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_j3m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;          |rectgen:rectBG1|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|rectgen:rectBG1                                                                                 ; rectgen             ; work         ;
-;          |rectgen:rectBG2|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|rectgen:rectBG2                                                                                 ; rectgen             ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name           ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |topBuscaminas                               ; 1266 (19)           ; 534 (17)                  ; 0                 ; 2          ; 53   ; 0            ; |topBuscaminas                                                                                                                                      ; topBuscaminas         ; work         ;
+;    |decoder_4bit_7seg:bombDis|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|decoder_4bit_7seg:bombDis                                                                                                            ; decoder_4bit_7seg     ; work         ;
+;    |decoder_4bit_7seg:posiblesDis|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|decoder_4bit_7seg:posiblesDis                                                                                                        ; decoder_4bit_7seg     ; work         ;
+;    |test_matrix:my_board|                    ; 524 (346)           ; 496 (330)                 ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|test_matrix:my_board                                                                                                                 ; test_matrix           ; work         ;
+;       |minesBoard:mBoard|                    ; 178 (142)           ; 166 (96)                  ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|test_matrix:my_board|minesBoard:mBoard                                                                                               ; minesBoard            ; work         ;
+;          |random_bomb_generator:bomb_gen|    ; 36 (36)             ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen                                                                ; random_bomb_generator ; work         ;
+;    |vga:controladorVGA|                      ; 709 (0)             ; 21 (0)                    ; 0                 ; 2          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA                                                                                                                   ; vga                   ; work         ;
+;       |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|pll:vgapll                                                                                                        ; pll                   ; work         ;
+;       |vgaController:vgaCont|                ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|vgaController:vgaCont                                                                                             ; vgaController         ; work         ;
+;       |videoGen:videoGen|                    ; 677 (267)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen                                                                                                 ; videoGen              ; work         ;
+;          |lpm_divide:Div0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_kbm:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated                                                   ; lpm_divide_kbm        ; work         ;
+;                |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh   ; work         ;
+;                   |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve         ; work         ;
+;          |lpm_divide:Div1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_gbm:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm        ; work         ;
+;                |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m        ; work         ;
+;                |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh   ; work         ;
+;                   |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve         ; work         ;
+;          |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_j3m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
+;                |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |rectgen:rectBG1|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|rectgen:rectBG1                                                                                 ; rectgen               ; work         ;
+;          |rectgen:rectBG2|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|rectgen:rectBG2                                                                                 ; rectgen               ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -290,334 +294,271 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+------------------------------------------+---------------------------------------------+
-; Register name                            ; Reason for Removal                          ;
-+------------------------------------------+---------------------------------------------+
-; test_matrix:my_board|board[7][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[7][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[6][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[5][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[4][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[3][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][2][6]      ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|board[2][2][5]      ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|board[2][2][4]      ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|board[2][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[2][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[1][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][7][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][7][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][7][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][7][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][6][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][6][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][6][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][6][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][5][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][5][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][5][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][5][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][4][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][4][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][4][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][4][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][3][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][3][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][3][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][3][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][2][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][2][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][2][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][2][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][1][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][1][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][1][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][1][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][0][6]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][0][5]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][0][4]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|board[0][0][0]      ; Stuck at GND due to stuck port clock_enable ;
-; test_matrix:my_board|real_state[7][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[7][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[6][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[5][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[4][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[3][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[2][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[1][0][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][7][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][6][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][5][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][4][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][3][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][2][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][1][2] ; Stuck at GND due to stuck port data_in      ;
-; test_matrix:my_board|real_state[0][0][2] ; Stuck at GND due to stuck port data_in      ;
-; selectedxcounter[3]                      ; Lost fanout                                 ;
-; selectedycounter[3]                      ; Lost fanout                                 ;
-; Total Number of Removed Registers = 321  ;                                             ;
-+------------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; test_matrix:my_board|board[7][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[7][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[6][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[5][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[4][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[3][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[2][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[1][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][7][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][7][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][7][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][6][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][6][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][6][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][5][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][5][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][5][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][4][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][4][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][4][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][3][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][3][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][3][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][2][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][2][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][2][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][1][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][1][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][1][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][0][6]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][0][5]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|board[0][0][4]      ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[7][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[6][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[5][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[4][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[3][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[2][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[1][0][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][7][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][6][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][5][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][4][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][3][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][2][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][1][2] ; Stuck at GND due to stuck port data_in ;
+; test_matrix:my_board|real_state[0][0][2] ; Stuck at GND due to stuck port data_in ;
+; selectedxcounter[3]                      ; Lost fanout                            ;
+; selectedycounter[3]                      ; Lost fanout                            ;
+; Total Number of Removed Registers = 258  ;                                        ;
++------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -625,14 +566,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 369   ;
+; Total registers                              ; 534   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 348   ;
+; Number of registers using Asynchronous Clear ; 411   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                              ;
++---------------------------------------------------------------------------------+---------+
+; Inverted Register                                                               ; Fan out ;
++---------------------------------------------------------------------------------+---------+
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][4]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][4]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[0][5]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][3]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[0][4]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][5]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][5]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[0][2]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][2]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][4]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][3]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][5]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][6]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][6]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][7]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][7]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[0][9]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][9]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][9]  ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][9]  ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][10] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][10] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][11] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][11] ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[0][12] ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][12] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][12] ; 2       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][12] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][14] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[1][14] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[3][15] ; 1       ;
+; test_matrix:my_board|minesBoard:mBoard|random_bomb_generator:bomb_gen|mt[2][15] ; 2       ;
+; Total number of inverted registers = 32                                         ;         ;
++---------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -641,7 +623,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|r[5]  ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|b[1]  ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|r[3]  ;
 ; 64:1               ; 3 bits    ; 126 LEs       ; 126 LEs              ; 0 LEs                  ; No         ; |topBuscaminas|vga:controladorVGA|videoGen:videoGen|Mux53 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
@@ -809,6 +791,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+-------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "test_matrix:my_board|random_bomb_generator:bomb_gen"                                  ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; row    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; column ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------+
 ; Port Connectivity Checks: "test_matrix:my_board" ;
 +-----------+-------+----------+-------------------+
@@ -823,47 +815,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+-------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "random_bomb_generator:rand_gen"                                                       ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; row    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; column ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 369                         ;
-;     CLR               ; 348                         ;
+; arriav_ff             ; 534                         ;
+;     CLR               ; 411                         ;
+;     ENA               ; 38                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1081                        ;
-;     arith             ; 349                         ;
+;     plain             ; 65                          ;
+; arriav_lcell_comb     ; 1272                        ;
+;     arith             ; 380                         ;
 ;         0 data inputs ; 43                          ;
-;         1 data inputs ; 186                         ;
-;         2 data inputs ; 18                          ;
+;         1 data inputs ; 216                         ;
+;         2 data inputs ; 19                          ;
 ;         3 data inputs ; 28                          ;
 ;         4 data inputs ; 74                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 731                         ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 113                         ;
-;         3 data inputs ; 26                          ;
-;         4 data inputs ; 59                          ;
-;         5 data inputs ; 230                         ;
-;         6 data inputs ; 293                         ;
+;     normal            ; 891                         ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 241                         ;
+;         3 data inputs ; 50                          ;
+;         4 data inputs ; 60                          ;
+;         5 data inputs ; 232                         ;
+;         6 data inputs ; 277                         ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 31.20                       ;
-; Average LUT depth     ; 12.94                       ;
+; Average LUT depth     ; 11.20                       ;
 +-----------------------+-----------------------------+
 
 
@@ -872,7 +855,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -882,7 +865,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 16:28:11 2023
+    Info: Processing started: Tue Oct 17 21:57:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -914,18 +897,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file random_
     Info (12023): Found entity 1: random_bomb_generator File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/random_bomb_generator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/clk_divider.sv
     Info (12023): Found entity 1: clk_divider File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/output_files/clk_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file minesboard.sv
+    Info (12023): Found entity 1: minesBoard File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/minesBoard.sv Line: 1
 Info (12127): Elaborating entity "topBuscaminas" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at topBuscaminas.sv(38): truncated value with size 32 to match size of target (4) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 38
+Warning (10036): Verilog HDL or VHDL warning at topBuscaminas.sv(18): object "bomb_count" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 18
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
-Info (12128): Elaborating entity "random_bomb_generator" for hierarchy "random_bomb_generator:rand_gen" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 32
-Warning (10230): Verilog HDL assignment warning at random_bomb_generator.sv(17): truncated value with size 32 to match size of target (16) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/random_bomb_generator.sv Line: 17
-Info (12128): Elaborating entity "test_matrix" for hierarchy "test_matrix:my_board" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 101
-Warning (10036): Verilog HDL or VHDL warning at test_matrix.sv(23): object "prev_selected_x" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 23
-Warning (10036): Verilog HDL or VHDL warning at test_matrix.sv(24): object "prev_selected_y" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 24
+Info (12128): Elaborating entity "test_matrix" for hierarchy "test_matrix:my_board" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 83
+Warning (10036): Verilog HDL or VHDL warning at test_matrix.sv(26): object "prev_selected_x" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 26
+Warning (10036): Verilog HDL or VHDL warning at test_matrix.sv(27): object "prev_selected_y" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 27
+Warning (10036): Verilog HDL or VHDL warning at test_matrix.sv(31): object "bomb_counter" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 31
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "real_state" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
-Info (12128): Elaborating entity "vga" for hierarchy "vga:controladorVGA" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 103
+Info (12128): Elaborating entity "random_bomb_generator" for hierarchy "test_matrix:my_board|random_bomb_generator:bomb_gen" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 40
+Warning (10036): Verilog HDL or VHDL warning at random_bomb_generator.sv(10): object "i" assigned a value but never read File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/random_bomb_generator.sv Line: 10
+Info (12128): Elaborating entity "minesBoard" for hierarchy "test_matrix:my_board|minesBoard:mBoard" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/test_matrix.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at minesBoard.sv(16): truncated value with size 4 to match size of target (1) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/minesBoard.sv Line: 16
+Warning (10855): Verilog HDL warning at minesBoard.sv(15): initial value for variable previousTotalMines should be constant File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/minesBoard.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at minesBoard.sv(28): truncated value with size 4 to match size of target (1) File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/minesBoard.sv Line: 28
+Info (12128): Elaborating entity "vga" for hierarchy "vga:controladorVGA" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (12128): Elaborating entity "pll" for hierarchy "vga:controladorVGA|pll:vgapll" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/vga.sv Line: 15
@@ -940,7 +930,7 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (12128): Elaborating entity "rectgen" for hierarchy "vga:controladorVGA|videoGen:videoGen|rectgen:rectBG1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 32
 Info (12128): Elaborating entity "decoder" for hierarchy "vga:controladorVGA|videoGen:videoGen|decoder:deco" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 53
-Info (12128): Elaborating entity "decoder_4bit_7seg" for hierarchy "decoder_4bit_7seg:bombDis" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 105
+Info (12128): Elaborating entity "decoder_4bit_7seg" for hierarchy "decoder_4bit_7seg:bombDis" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/topBuscaminas.sv Line: 87
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:controladorVGA|videoGen:videoGen|Div1" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 39
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:controladorVGA|videoGen:videoGen|Div0" File: D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/videoGen.sv Line: 38
@@ -991,16 +981,16 @@ Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/TEC/tdd/drayodigital_design-_lab-_2023/laboratorio4/output_files/buscaminas.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1225 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1455 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 1170 logic cells
+    Info (21061): Implemented 1400 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Tue Oct 17 16:28:24 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Tue Oct 17 21:58:14 2023
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:53
 
 
 +------------------------------------------+
