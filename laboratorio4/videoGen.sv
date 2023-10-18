@@ -169,12 +169,12 @@ module videoGen(
                     g = 8'h66; // 102
                     b = 8'h66; // 102
                 end
+					 // Seleccionado
 					 3'b100: begin
                     r = 8'h00; // 0
                     g = 8'h8F; // 143
                     b = 8'hFF; // 255
                 end
-                // otros estados
             endcase
         end
     end

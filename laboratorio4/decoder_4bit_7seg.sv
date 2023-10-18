@@ -1,3 +1,4 @@
+// Decodificador de 4 bits a 7 bits para un display
 module decoder_4bit_7seg (
     input logic [3:0] num, 
     output logic [6:0] display

@@ -1,9 +1,10 @@
+// Decodificador de 3 bits a 7 bits para display 
 module decoder(input logic [2:0] num, output logic [6:0] display);
 
 always_comb begin
 	display = 7'b0000000;
 	case (num)
-		3'b000: display = 7'b0111111 ;
+		3'b000: display = 7'b0111111;
 		3'b001: display = 7'b0000110;
 		3'b010: display = 7'b1011011;
 		3'b011: display = 7'b1001111;

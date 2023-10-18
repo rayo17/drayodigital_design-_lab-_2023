@@ -1,22 +1,22 @@
 module topBuscaminas(
-    input logic [3:0] cantBombas,
-    input logic derechaBtn_raw,
-    input logic izquierdaBtn_raw,
-    input logic marcarBtn_raw,
-    input logic seleccionarBtn_raw,
-    input logic reset,
-    input logic clk, // para la vga
-    output logic vgaclk, // 25.175 MHz VGA clock
+    input logic [3:0] cantBombas,	// Cantidad de bombas
+    input logic derechaBtn_raw,		// Señal de boton horizontal
+    input logic izquierdaBtn_raw,	// Señal de boton vertical
+    input logic marcarBtn_raw,		// Señal de boton bandera
+    input logic seleccionarBtn_raw,	// Señal de boton abrir celda
+    input logic reset,					// Reset
+    input logic clk, 					// para la vga
+    output logic vgaclk, 				// 25.175 MHz VGA clock
     output logic hsync, vsync,
-    output logic sync_b, blank_b, // To monitor & DAC
-    output logic [7:0] r, g, b, // To video DAC
-    output logic [6:0] cantBomDisplay,
-    output logic [6:0] posiblesDisplay);
+    output logic sync_b, blank_b, 	// To monitor & DAC
+    output logic [7:0] r, g, b, 		
+    output logic [6:0] cantBomDisplay, //Display de cantidad de bombas
+    output logic [6:0] posiblesDisplay); //Display de cantidad de banderas
 
 	
 	logic [2:0] random_x, random_y;
-	reg [3:0] bomb_count = 4'b0; // Contador para las bombas
-	logic combined_reset; // Señal combinada de reset
+	reg [3:0] bomb_count = 4'b0; 		// Contador para las bombas
+	logic combined_reset; 				// Señal combinada de reset
 
 
 
@@ -26,6 +26,7 @@ module topBuscaminas(
 	// Contador para eje x
 	reg [3:0] selectedxcounter;
 
+	// ----------- Contadores para evitar debouncing -----------------------
 	always @(posedge derechaBtn_raw or negedge reset) begin
 		 if (!reset)
 			  selectedxcounter <= 0;
@@ -66,9 +67,9 @@ module topBuscaminas(
 		 else 
 			  opencounter <= opencounter + 1'b1;
 	end
+	// -------------------------------------------------------------------
 
-
-
+	// Logica de la matriz del juego
 	test_matrix my_board(
 	    .clk(clk),
 	    .reset(reset),
@@ -82,12 +83,14 @@ module topBuscaminas(
 	    .board(board)
 	);
 	
+	// Instancia del controlador de la VGA
 	vga controladorVGA(clk, board, vgaclk, hsync, vsync, sync_b, blank_b, r, g, b);
-
+	
+	// Instancia del deco para display 2
 	decoder_4bit_7seg bombDis(cantBombas, cantBomDisplay);
 
 
-
+	// Instancia del deco para display 0
 	decoder_4bit_7seg posiblesDis(counter0, posiblesDisplay);
 
 endmodule

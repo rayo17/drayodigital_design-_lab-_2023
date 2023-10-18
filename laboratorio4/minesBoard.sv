@@ -1,3 +1,4 @@
+// Modulo encargado de colocar las minas en la matriz
 module minesBoard(
     input wire clk,       
     input wire reset,      
@@ -12,6 +13,7 @@ module minesBoard(
     //reg totalMinesChanged = 0;
     reg previousTotalMines = 0;
     
+	 // inicializa todo en cero
     initial begin
         previousTotalMines = totalMines;
         for (int i = 0; i < 8; i++) begin
@@ -21,7 +23,7 @@ module minesBoard(
         end
     end
      
-
+	 // en cada cambio de clk checkea la cantidad de minas y las coloca
     always @(posedge clk) begin
         if (totalMines != previousTotalMines) begin
             //totalMinesChanged = 1;

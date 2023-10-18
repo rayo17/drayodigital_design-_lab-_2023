@@ -6,7 +6,7 @@ module random_bomb_generator(
 );
 
 // Configuración básica de un pequeño MT (Mersenne Twister)
-reg [15:0] mt[3:0];  // Usaremos solo 4 registros para simplicidad
+reg [15:0] mt[3:0];  // Usaremos solo 4 registros 
 integer i = 0;
 reg [15:0] y;
 

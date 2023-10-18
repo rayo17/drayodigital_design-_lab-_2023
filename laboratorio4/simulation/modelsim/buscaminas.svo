@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "10/17/2023 22:00:45"
+// DATE "10/17/2023 22:41:26"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -47,23 +47,23 @@ module topBuscaminas (
 	b,
 	cantBomDisplay,
 	posiblesDisplay);
-input 	[3:0] cantBombas;
-input 	derechaBtn_raw;
-input 	izquierdaBtn_raw;
-input 	marcarBtn_raw;
-input 	seleccionarBtn_raw;
-input 	reset;
-input 	clk;
-output 	vgaclk;
-output 	hsync;
-output 	vsync;
-output 	sync_b;
-output 	blank_b;
-output 	[7:0] r;
-output 	[7:0] g;
-output 	[7:0] b;
-output 	[6:0] cantBomDisplay;
-output 	[6:0] posiblesDisplay;
+input 	logic [3:0] cantBombas ;
+input 	logic derechaBtn_raw ;
+input 	logic izquierdaBtn_raw ;
+input 	logic marcarBtn_raw ;
+input 	logic seleccionarBtn_raw ;
+input 	logic reset ;
+input 	logic clk ;
+output 	logic vgaclk ;
+output 	logic hsync ;
+output 	logic vsync ;
+output 	logic sync_b ;
+output 	logic blank_b ;
+output 	logic [7:0] r ;
+output 	logic [7:0] g ;
+output 	logic [7:0] b ;
+output 	logic [6:0] cantBomDisplay ;
+output 	logic [6:0] posiblesDisplay ;
 
 // Design Ports Information
 // vgaclk	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default

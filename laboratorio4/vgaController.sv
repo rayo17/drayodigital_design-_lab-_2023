@@ -1,3 +1,5 @@
+
+// Modulo encargado de generar las señales verticales y horizontales necesarias para el controllador VGA
 module vgaController #(parameter HACTIVE = 10'd640,
 HFP = 10'd16,
 HSYN = 10'd96,
